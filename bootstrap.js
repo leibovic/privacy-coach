@@ -14,7 +14,7 @@ XPCOMUtils.defineLazyGetter(this, "CrashReporter", function() {
 });
 
 // Prefix for prefs to store original user prefs.
-var PREF_PREFIX = "extensions.fxconfidential.";
+var PREF_PREFIX = "extensions.privacycoach.";
 
 // Prefs that the add-on sets.
 var PREFS = [
@@ -46,7 +46,7 @@ var PREFS = [
 
 // An example of how to create a string bundle for localization.
 XPCOMUtils.defineLazyGetter(this, "Strings", function() {
-  return Services.strings.createBundle("chrome://fxconfidential/locale/fxconfidential.properties");
+  return Services.strings.createBundle("chrome://privacycoach/locale/privacycoach.properties");
 });
 
 function loadIntoWindow(window) {
@@ -93,7 +93,7 @@ function startup(data, reason) {
         Services.prefs.setIntPref(PREF_PREFIX + pref.key, Services.prefs.getIntPref(pref.key));
         Services.prefs.setIntPref(pref.key, pref.value);
       } else {
-        Cu.reportError("Firefox Confidential: Can't set unknown pref type: " + JSON.stringify(pref));
+        Cu.reportError("Privacy Coach: Can't set unknown pref type: " + JSON.stringify(pref));
       }
     }
   }
@@ -119,7 +119,7 @@ function shutdown(data, reason) {
       } else if (pref.type == "int") {
         Services.prefs.setIntPref(pref.key, Services.prefs.getIntPref(PREF_PREFIX + pref.key));
       } else {
-        Cu.reportError("Firefox Confidential: Can't reset unknown pref type: " + JSON.stringify(pref));
+        Cu.reportError("Privacy Coach: Can't reset unknown pref type: " + JSON.stringify(pref));
       }
 
       // Clear the pref that we set for restore purposes.

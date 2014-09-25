@@ -2,12 +2,12 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
     <Description about="urn:mozilla:install-manifest">
-        <em:id>firefox.confidential@mozilla.org</em:id>
+        <em:id>privacy.coach@mozilla.org</em:id>
         <em:type>2</em:type>
-        <em:name>Firefox Confidential</em:name>
+        <em:name>Privacy Coach</em:name>
         <em:version>0.1</em:version>
         <em:bootstrap>true</em:bootstrap>
-        <em:description>Adds more privacy features to your Firefox.</em:description>
+        <em:description>Add-on that helps you use privacy features in your browser.</em:description>
         <em:creator>Margaret Leibovic</em:creator>
 
         <!-- Mobile -->
