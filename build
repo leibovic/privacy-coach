@@ -15,6 +15,7 @@ zip -r $XPI bootstrap.js \
             install.rdf \
             chrome.manifest \
             content \
+            skin \
             locale \
             README.md \
     -x *.DS_Store*
