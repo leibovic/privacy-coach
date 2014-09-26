@@ -105,6 +105,12 @@ function startup(data, reason) {
     loadIntoWindow(domWindow);
   }
   Services.wm.addListener(windowListener);
+
+  // Open a welcome page on install.
+  if (reason == ADDON_INSTALL) {
+    let BrowserApp = Services.wm.getMostRecentWindow("navigator:browser").BrowserApp;
+    BrowserApp.addTab("chrome://privacycoach/content/welcome.xhtml");
+  }
 }
 
 function shutdown(data, reason) {
