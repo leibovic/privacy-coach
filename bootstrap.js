@@ -1,6 +1,7 @@
 const { classes: Cc, interfaces: Ci, utils: Cu } = Components;
 
 Cu.import("resource://gre/modules/Services.jsm");
+Cu.import("resource://gre/modules/SharedPreferences.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
 XPCOMUtils.defineLazyGetter(this, "CrashReporter", function() {
@@ -40,6 +41,16 @@ var PREFS = [
   },
   {
     key: "datareporting.crashreporter.submitEnabled",
+    value: false
+  },
+  {
+    type: "sp-bool",
+    key: "android.not_a_preference.healthreport.uploadEnabled",
+    value: false
+  },
+  {
+    type: "sp-bool",
+    key: "android.not_a_pref.app.geo.reportdata",
     value: false
   }
 ];
@@ -92,6 +103,9 @@ function startup(data, reason) {
       } else if (pref.type == "int") {
         Services.prefs.setIntPref(PREF_PREFIX + pref.key, Services.prefs.getIntPref(pref.key));
         Services.prefs.setIntPref(pref.key, pref.value);
+      } else if (pref.type == "sp-bool") {
+        Services.prefs.setBoolPref(PREF_PREFIX + pref.key, SharedPreferences.forApp().getBoolPref(pref.key));
+        SharedPreferences.forApp().setBoolPref(pref.key, pref.value);
       } else {
         Cu.reportError("Privacy Coach: Can't set unknown pref type: " + JSON.stringify(pref));
       }
@@ -124,6 +138,8 @@ function shutdown(data, reason) {
         Services.prefs.setBoolPref(pref.key, Services.prefs.getBoolPref(PREF_PREFIX + pref.key));
       } else if (pref.type == "int") {
         Services.prefs.setIntPref(pref.key, Services.prefs.getIntPref(PREF_PREFIX + pref.key));
+      } else if (pref.type == "sp-bool") {
+        SharedPreferences.forApp().setBoolPref(pref.key, Services.prefs.getBoolPref(PREF_PREFIX + pref.key));
       } else {
         Cu.reportError("Privacy Coach: Can't reset unknown pref type: " + JSON.stringify(pref));
       }
