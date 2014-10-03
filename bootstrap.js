@@ -4,6 +4,10 @@ Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/SharedPreferences.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
+// Public domain JNI.jsm is only available in the tree in Firefox 34+.
+XPCOMUtils.defineLazyModuleGetter(this, "JNI",
+  "chrome://privacycoach/content/JNI.jsm");
+
 XPCOMUtils.defineLazyModuleGetter(this, "LightweightThemeManager",
   "resource://gre/modules/LightweightThemeManager.jsm");
 
@@ -103,6 +107,55 @@ var windowListener = {
   }
 };
 
+/**
+ * Uses JNI to broadcast changes to data reporting preferences.
+ *
+ * GeckoPreferences.broadcastHealthReportUploadPref(context);
+ * GeckoPreferences.broadcastStumblerPref(context);
+ */
+function broadcastSharedPrefs() {
+  let v = Services.appinfo.version;
+  let version = parseInt(v.substring(0, v.indexOf(".")))
+
+  let jenv;
+  try {
+    jenv = JNI.GetForThread();
+    let geckoAppShell = JNI.LoadClass(jenv, "org.mozilla.gecko.GeckoAppShell", {
+      static_methods: [
+        { name: "getContext", sig: "()Landroid/content/Context;" },
+      ],
+    });
+
+    let context = geckoAppShell.getContext();
+
+    // The stumbler pref was only added in Fx35.
+    if (version >= 35) {
+      let geckoPreferences = JNI.LoadClass(jenv, "org.mozilla.gecko.preferences.GeckoPreferences", {
+        static_methods: [
+          { name: "broadcastHealthReportUploadPref", sig: "(Landroid/content/Context;)V" },
+          { name: "broadcastStumblerPref", sig: "(Landroid/content/Context;)V" },
+        ],
+      });
+      geckoPreferences.broadcastHealthReportUploadPref(context);
+      geckoPreferences.broadcastStumblerPref(context);
+    } else {
+      let geckoPreferences = JNI.LoadClass(jenv, "org.mozilla.gecko.preferences.GeckoPreferences", {
+        static_methods: [
+          { name: "broadcastHealthReportUploadPref", sig: "(Landroid/content/Context;)V" },
+        ],
+      });
+      geckoPreferences.broadcastHealthReportUploadPref(context);
+    }
+
+  } catch (e) {
+    Cu.reportError("Exception broadcasting shared pref change: " + e);
+  } finally {
+    if (jenv) {
+      JNI.UnloadClasses(jenv);
+    }
+  }
+}
+
 function startup(data, reason) {
   if (reason == ADDON_INSTALL || reason == ADDON_ENABLE) {
     // Store the original pref values so that we can restore them when the add-on
@@ -127,6 +180,7 @@ function startup(data, reason) {
     }
 
     LightweightThemeManager.currentTheme = THEME;
+    broadcastSharedPrefs();
   }
 
   // Load UI features into the main window.
@@ -166,6 +220,7 @@ function shutdown(data, reason) {
     }
 
     LightweightThemeManager.forgetUsedTheme(THEME.id);
+    broadcastSharedPrefs();
   }
 
   // Unload UI features from the main window.
