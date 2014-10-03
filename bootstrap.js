@@ -62,22 +62,20 @@ var PREFS = [
   }
 ];
 
-function getTheme() {
-  return {
-    id: "privacycoach",
-    name: Strings.GetStringFromName("lwt.name"),
-    description: Strings.GetStringFromName("lwt.description"),
-    homepageURL: "https://addons.mozilla.org/firefox/addon/space-fantasy/",
-    headerURL: "chrome://privacycoach/content/header.jpg",
-    footerURL: "chrome://privacycoach/content/footer.jpg",
-    textcolor: "#ffffff",
-    accentcolor: "#d9d9d9",
-    iconURL: "chrome://privacycoach/content/icon.jpg",
-    previewURL: "chrome://privacycoach/content/preview.jpg",
-    author: "fx5800p",
-    version: "1.0"
-  };
-}
+var THEME = {
+  id: "540624",
+  name: "13fox",
+  author: "Anthony Lam",
+  version: "1.0",
+  headerURL: "https://addons.cdn.mozilla.net/user-media/addons/540624/header.png?1411165085",
+  footerURL: "https://addons.cdn.mozilla.net/user-media/addons/540624/footer.png?1411165085",
+  iconURL: "https://addons.cdn.mozilla.net/user-media/addons/540624/icon.png?1411165085",
+  previewURL: "https://addons.cdn.mozilla.net/user-media/addons/540624/preview.png?1411165085",
+  detailURL: "https://addons.mozilla.org/en-US/addon/13fox/",
+  updateURL: "https://versioncheck.addons.mozilla.org/en-US/themes/update-check/540624",
+  textcolor: "#FFFFFF",
+  accentcolor: "#363B40"
+};
 
 function loadIntoWindow(window) {
 }
@@ -128,7 +126,7 @@ function startup(data, reason) {
       }
     }
 
-    //LightweightThemeManager.currentTheme = getTheme();
+    LightweightThemeManager.currentTheme = THEME;
   }
 
   // Load UI features into the main window.
@@ -167,7 +165,7 @@ function shutdown(data, reason) {
       Services.prefs.clearUserPref(PREF_PREFIX + pref.key)
     }
 
-    //LightweightThemeManager.currentTheme = LightweightThemeManager.usedThemes[1];
+    LightweightThemeManager.currentTheme = LightweightThemeManager.usedThemes[1];
   }
 
   // Unload UI features from the main window.
