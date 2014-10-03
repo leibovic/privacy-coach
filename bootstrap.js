@@ -122,13 +122,13 @@ function startup(data, reason) {
         Services.prefs.setIntPref(pref.key, pref.value);
       } else if (pref.type == "sp-bool") {
         Services.prefs.setBoolPref(PREF_PREFIX + pref.key, SharedPreferences.forApp().getBoolPref(pref.key));
-        SharedPreferences.forApp().setBoolPref(pref.key, pref.value);
+        SharedPreferences.forProfile().setBoolPref(pref.key, pref.value);
       } else {
         Cu.reportError("Privacy Coach: Can't set unknown pref type: " + JSON.stringify(pref));
       }
     }
 
-    LightweightThemeManager.currentTheme = getTheme();
+    //LightweightThemeManager.currentTheme = getTheme();
   }
 
   // Load UI features into the main window.
@@ -158,7 +158,7 @@ function shutdown(data, reason) {
       } else if (pref.type == "int") {
         Services.prefs.setIntPref(pref.key, Services.prefs.getIntPref(PREF_PREFIX + pref.key));
       } else if (pref.type == "sp-bool") {
-        SharedPreferences.forApp().setBoolPref(pref.key, Services.prefs.getBoolPref(PREF_PREFIX + pref.key));
+        SharedPreferences.forProfile().setBoolPref(pref.key, Services.prefs.getBoolPref(PREF_PREFIX + pref.key));
       } else {
         Cu.reportError("Privacy Coach: Can't reset unknown pref type: " + JSON.stringify(pref));
       }
@@ -167,7 +167,7 @@ function shutdown(data, reason) {
       Services.prefs.clearUserPref(PREF_PREFIX + pref.key)
     }
 
-    LightweightThemeManager.currentTheme = LightweightThemeManager.usedThemes[1];
+    //LightweightThemeManager.currentTheme = LightweightThemeManager.usedThemes[1];
   }
 
   // Unload UI features from the main window.
