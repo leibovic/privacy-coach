@@ -165,7 +165,7 @@ function shutdown(data, reason) {
       Services.prefs.clearUserPref(PREF_PREFIX + pref.key)
     }
 
-    LightweightThemeManager.currentTheme = LightweightThemeManager.usedThemes[1];
+    LightweightThemeManager.forgetUsedTheme(THEME.id);
   }
 
   // Unload UI features from the main window.
