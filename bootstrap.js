@@ -4,6 +4,9 @@ Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/SharedPreferences.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
+XPCOMUtils.defineLazyModuleGetter(this, "LightweightThemeManager",
+  "resource://gre/modules/LightweightThemeManager.jsm");
+
 XPCOMUtils.defineLazyGetter(this, "CrashReporter", function() {
   try {
     return Cc["@mozilla.org/xre/app-info;1"].getService(Ci["nsICrashReporter"]);
@@ -12,6 +15,10 @@ XPCOMUtils.defineLazyGetter(this, "CrashReporter", function() {
     // object instead of throwing an exception.
     return {};
   }
+});
+
+XPCOMUtils.defineLazyGetter(this, "Strings", function() {
+  return Services.strings.createBundle("chrome://privacycoach/locale/privacycoach.properties");
 });
 
 // Prefix for prefs to store original user prefs.
@@ -55,17 +62,27 @@ var PREFS = [
   }
 ];
 
-// An example of how to create a string bundle for localization.
-XPCOMUtils.defineLazyGetter(this, "Strings", function() {
-  return Services.strings.createBundle("chrome://privacycoach/locale/privacycoach.properties");
-});
+function getTheme() {
+  return {
+    id: "privacycoach",
+    name: Strings.GetStringFromName("lwt.name"),
+    description: Strings.GetStringFromName("lwt.description"),
+    homepageURL: "https://addons.mozilla.org/firefox/addon/space-fantasy/",
+    headerURL: "chrome://privacycoach/content/header.jpg",
+    footerURL: "chrome://privacycoach/content/footer.jpg",
+    textcolor: "#ffffff",
+    accentcolor: "#d9d9d9",
+    iconURL: "chrome://privacycoach/content/icon.jpg",
+    previewURL: "chrome://privacycoach/content/preview.jpg",
+    author: "fx5800p",
+    version: "1.0"
+  };
+}
 
 function loadIntoWindow(window) {
-
 }
 
 function unloadFromWindow(window) {
-
 }
 
 /**
@@ -74,7 +91,7 @@ function unloadFromWindow(window) {
 var windowListener = {
   onOpenWindow: function(window) {
     // Wait for the window to finish loading
-    let domWindow = aWindow.QueryInterface(Ci.nsIInterfaceRequestor).getInterface(Ci.nsIDOMWindowInternal || Ci.nsIDOMWindow);
+    let domWindow = window.QueryInterface(Ci.nsIInterfaceRequestor).getInterface(Ci.nsIDOMWindowInternal || Ci.nsIDOMWindow);
     domWindow.addEventListener("load", function() {
       domWindow.removeEventListener("load", arguments.callee, false);
       loadIntoWindow(domWindow);
@@ -110,6 +127,8 @@ function startup(data, reason) {
         Cu.reportError("Privacy Coach: Can't set unknown pref type: " + JSON.stringify(pref));
       }
     }
+
+    LightweightThemeManager.currentTheme = getTheme();
   }
 
   // Load UI features into the main window.
@@ -147,6 +166,8 @@ function shutdown(data, reason) {
       // Clear the pref that we set for restore purposes.
       Services.prefs.clearUserPref(PREF_PREFIX + pref.key)
     }
+
+    LightweightThemeManager.currentTheme = LightweightThemeManager.usedThemes[1];
   }
 
   // Unload UI features from the main window.
