@@ -57,7 +57,7 @@ var PREFS = [
   },
   {
     type: "sp-bool",
-    key: "android.not_a_pref.app.geo.reportdata",
+    key: "android.not_a_preference.app.geo.reportdata",
     value: false
   }
 ];
@@ -120,7 +120,7 @@ function startup(data, reason) {
         Services.prefs.setIntPref(pref.key, pref.value);
       } else if (pref.type == "sp-bool") {
         Services.prefs.setBoolPref(PREF_PREFIX + pref.key, SharedPreferences.forApp().getBoolPref(pref.key));
-        SharedPreferences.forProfile().setBoolPref(pref.key, pref.value);
+        SharedPreferences.forApp().setBoolPref(pref.key, pref.value);
       } else {
         Cu.reportError("Privacy Coach: Can't set unknown pref type: " + JSON.stringify(pref));
       }
@@ -156,7 +156,7 @@ function shutdown(data, reason) {
       } else if (pref.type == "int") {
         Services.prefs.setIntPref(pref.key, Services.prefs.getIntPref(PREF_PREFIX + pref.key));
       } else if (pref.type == "sp-bool") {
-        SharedPreferences.forProfile().setBoolPref(pref.key, Services.prefs.getBoolPref(PREF_PREFIX + pref.key));
+        SharedPreferences.forApp().setBoolPref(pref.key, Services.prefs.getBoolPref(PREF_PREFIX + pref.key));
       } else {
         Cu.reportError("Privacy Coach: Can't reset unknown pref type: " + JSON.stringify(pref));
       }
