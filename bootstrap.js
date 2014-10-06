@@ -1,12 +1,13 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+"use strict";
+
 const { classes: Cc, interfaces: Ci, utils: Cu } = Components;
 
 Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/SharedPreferences.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
-
-// Public domain JNI.jsm is only available in the tree in Firefox 34+.
-XPCOMUtils.defineLazyModuleGetter(this, "JNI",
-  "chrome://privacycoach/content/JNI.jsm");
 
 XPCOMUtils.defineLazyModuleGetter(this, "LightweightThemeManager",
   "resource://gre/modules/LightweightThemeManager.jsm");
@@ -21,15 +22,28 @@ XPCOMUtils.defineLazyGetter(this, "CrashReporter", function() {
   }
 });
 
+XPCOMUtils.defineLazyGetter(this, "JNI", function() {
+  // Check to see if the public domain JNI.jsm is available in the tree (Firefox 34+).
+  let scope = {};
+  Cu.import("resource://gre/modules/JNI.jsm", scope);
+  if (scope.JNI.GetForThread) {
+    return scope.JNI;
+  }
+
+  // Othwerwise, fall back to import our own.
+  Cu.import("chrome://privacycoach/content/JNI.jsm", scope);
+  return scope.JNI;
+});
+
 XPCOMUtils.defineLazyGetter(this, "Strings", function() {
   return Services.strings.createBundle("chrome://privacycoach/locale/privacycoach.properties");
 });
 
 // Prefix for prefs to store original user prefs.
-var PREF_PREFIX = "extensions.privacycoach.";
+let PREF_PREFIX = "extensions.privacycoach.";
 
 // Prefs that the add-on sets.
-var PREFS = [
+let PREFS = [
   {
     type: "bool",
     key: "privacy.donottrackheader.enabled",
@@ -66,7 +80,7 @@ var PREFS = [
   }
 ];
 
-var THEME = {
+let THEME = {
   id: "540624",
   name: "13fox",
   author: "Anthony Lam",
@@ -90,7 +104,7 @@ function unloadFromWindow(window) {
 /**
  * bootstrap.js API
  */
-var windowListener = {
+let windowListener = {
   onOpenWindow: function(window) {
     // Wait for the window to finish loading
     let domWindow = window.QueryInterface(Ci.nsIInterfaceRequestor).getInterface(Ci.nsIDOMWindowInternal || Ci.nsIDOMWindow);
