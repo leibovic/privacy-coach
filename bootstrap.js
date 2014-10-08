@@ -95,10 +95,40 @@ let THEME = {
   accentcolor: "#363B40"
 };
 
+// Stores a reference to the original BrowserApp.observe function.
+let originalObserve;
+
 function loadIntoWindow(window) {
+  originalObserve = window.BrowserApp.observe;
+
+  // Intercept the original function call.
+  window.BrowserApp.observe = function(subject, topic, data) {
+    let shouldContinue = true;
+
+    if (topic === "Tab:Load") {
+      let d = JSON.parse(data);
+      if (d.engine) {
+        let engine = Services.search.getEngineByName(d.engine);
+        if (engine) {
+          let submission = engine.getSubmission("");
+          if (submission.uri.scheme !== "https") {
+            let title = Strings.GetStringFromName("httpsWarning.title");
+            let message = Strings.formatStringFromName("httpsWarning.message", [d.engine], 1);
+            shouldContinue = Services.prompt.confirm(window, title, message);
+          }
+        }
+      }
+    }
+
+    // Then call the original function.
+    if (shouldContinue) {
+      originalObserve.call(window.BrowserApp, subject, topic, data);
+    }
+  }
 }
 
 function unloadFromWindow(window) {
+  window.BrowserApp.observe = originalObserve;
 }
 
 /**
