@@ -107,9 +107,8 @@ function observeSearchEngineModified(subject, topic, data) {
     let submission = engine.getSubmission("");
     if (submission.uri.scheme !== "https") {
       let window = Services.wm.getMostRecentWindow("navigator:browser");
-      let title = Strings.GetStringFromName("prompt.title");
       let message = Strings.formatStringFromName("defaultWarning.message", [engine.name], 1);
-      Services.prompt.alert(window, title, message);
+      window.NativeWindow.toast.show(message, "long");
     }
   }
 }
