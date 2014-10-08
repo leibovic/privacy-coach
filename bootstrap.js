@@ -229,6 +229,7 @@ function loadIntoWindow(window) {
 function unloadFromWindow(window) {
   window.BrowserApp.observe = originalObserve;
   window.SearchEngines.addOpenSearchEngine = originalAddOpenSearchEngine;
+  window.SearchEngines.addEngine = originalAddEngine;
 }
 
 /**
