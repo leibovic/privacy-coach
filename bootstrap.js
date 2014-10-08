@@ -160,10 +160,12 @@ function confirmSearch(window, name) {
 // Stores a reference to the original BrowserApp.observe function.
 let originalObserve;
 
+// Stored a reference to the original SearchEngines.addOpenSearchEngine.
+let originalAddOpenSearchEngine;
+
+// Monkey-patching madness.
 function loadIntoWindow(window) {
   originalObserve = window.BrowserApp.observe;
-
-  // Intercept the original function call.
   window.BrowserApp.observe = function(subject, topic, data) {
     let shouldContinue = true;
 
@@ -179,10 +181,26 @@ function loadIntoWindow(window) {
       originalObserve.call(window.BrowserApp, subject, topic, data);
     }
   }
+
+  originalAddOpenSearchEngine = window.SearchEngines.addOpenSearchEngine;
+  window.SearchEngines.addOpenSearchEngine = function(engine) {
+    let shouldContinue = true;
+
+    if (!engine.url.startsWith("https://")) {
+      let title = Strings.GetStringFromName("prompt.title");
+      let message = Strings.formatStringFromName("httpsWarning.message", [engine.title], 1);
+      shouldContinue = Services.prompt.confirm(window, title, message);
+    }
+
+    if (shouldContinue) {
+      originalAddOpenSearchEngine.call(window.SearchEngines, engine);
+    }
+  }
 }
 
 function unloadFromWindow(window) {
   window.BrowserApp.observe = originalObserve;
+  window.SearchEngines.addOpenSearchEngine = originalAddOpenSearchEngine;
 }
 
 /**
