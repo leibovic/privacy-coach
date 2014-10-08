@@ -188,7 +188,7 @@ function loadIntoWindow(window) {
 
     if (!engine.url.startsWith("https://")) {
       let title = Strings.GetStringFromName("prompt.title");
-      let message = Strings.formatStringFromName("httpsWarning.message", [engine.title], 1);
+      let message = Strings.formatStringFromName("addEngineWarning.message", [engine.title], 1);
       shouldContinue = Services.prompt.confirm(window, title, message);
     }
 
