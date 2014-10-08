@@ -99,6 +99,22 @@ let THEME = {
 };
 
 /**
+ * Observes "browser-search-engine-modified" notification.
+ */
+function observeSearchEngineModified(subject, topic, data) {
+  if (data == "engine-default") {
+    let engine = subject.QueryInterface(Ci.nsISearchEngine);
+    let submission = engine.getSubmission("");
+    if (submission.uri.scheme !== "https") {
+      let window = Services.wm.getMostRecentWindow("navigator:browser");
+      let title = Strings.GetStringFromName("prompt.title");
+      let message = Strings.formatStringFromName("defaultWarning.message", [engine.name], 1);
+      Services.prompt.alert(window, title, message);
+    }
+  }
+}
+
+/**
  * Prompt the user before performing non-https searches.
  * @param window
  * @param name Search engine name.
@@ -127,7 +143,7 @@ function confirmSearch(window, name) {
     return true;
   }
 
-  let title = Strings.GetStringFromName("httpsWarning.title");
+  let title = Strings.GetStringFromName("prompt.title");
   let message = Strings.formatStringFromName("httpsWarning.message", [name], 1);
   let dontAsk = Strings.formatStringFromName("httpsWarning.dontAsk", [name], 1);
   let checkState = { value: false };
@@ -279,6 +295,8 @@ function startup(data, reason) {
     let BrowserApp = Services.wm.getMostRecentWindow("navigator:browser").BrowserApp;
     BrowserApp.addTab("chrome://privacycoach/content/welcome.xhtml");
   }
+
+  Services.obs.addObserver(observeSearchEngineModified, "browser-search-engine-modified", false);
 }
 
 function shutdown(data, reason) {
@@ -314,6 +332,8 @@ function shutdown(data, reason) {
     let domWindow = windows.getNext().QueryInterface(Ci.nsIDOMWindow);
     unloadFromWindow(domWindow);
   }
+
+  Services.obs.removeObserver(observeSearchEngineModified, "browser-search-engine-modified");
 }
 
 function install(aData, aReason) {
