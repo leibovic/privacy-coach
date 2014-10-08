@@ -41,7 +41,9 @@ XPCOMUtils.defineLazyGetter(this, "Strings", function() {
 
 // Prefix for prefs to store original user prefs.
 let PREF_PREFIX = "extensions.privacycoach.";
-let PREF_DONT_ASK_PREFIX = "extensions.privacycoach.dontAsk.";
+
+// JSON array of search engines that we won't warn about.
+let PREF_DONT_WARN_ENGINES = "extensions.privacycoach.dontWarnEngines";
 
 // Prefs that the add-on sets.
 let PREFS = [
@@ -104,11 +106,16 @@ let THEME = {
  * @return Whether or not we should perform the serach.
  */
 function confirmSearch(window, name) {
+  let dontWarnEngines;
   try {
-    if (Services.prefs.getBoolPref(PREF_DONT_ASK_PREFIX + name)) {
-      return true;
-    }
-  } catch(e) {}
+    dontWarnEngines = JSON.parse(Services.prefs.getCharPref(PREF_DONT_WARN_ENGINES));
+  } catch(e) {
+    dontWarnEngines = [];
+  }
+
+  if (dontWarnEngines.indexOf(name) != -1) {
+    return true;
+  }
 
   let engine = Services.search.getEngineByName(name);
   if (!engine) {
@@ -122,13 +129,14 @@ function confirmSearch(window, name) {
 
   let title = Strings.GetStringFromName("httpsWarning.title");
   let message = Strings.formatStringFromName("httpsWarning.message", [name], 1);
-  let dontAsk = Strings.GetStringFromName("httpsWarning.dontAsk");
+  let dontAsk = Strings.formatStringFromName("httpsWarning.dontAsk", [name], 1);
   let checkState = { value: false };
   let shouldContinue = Services.prompt.confirmCheck(window, title, message, dontAsk, checkState);
 
   // Set a pref if the user doesn't want to be asked again.
-  if (checkState.value) {
-    Services.prefs.setBoolPref(PREF_DONT_ASK_PREFIX + name, true);
+  if (shouldContinue && checkState.value) {
+    dontWarnEngines.push(name);
+    Services.prefs.setCharPref(PREF_DONT_WARN_ENGINES, JSON.stringify(dontWarnEngines));
   }
 
   return shouldContinue;
@@ -291,7 +299,8 @@ function shutdown(data, reason) {
       }
 
       // Clear the pref that we set for restore purposes.
-      Services.prefs.clearUserPref(PREF_PREFIX + pref.key)
+      Services.prefs.clearUserPref(PREF_PREFIX + pref.key);
+      Services.prefs.clearUserPref(PREF_DONT_WARN_ENGINES);
     }
 
     LightweightThemeManager.forgetUsedTheme(THEME.id);
