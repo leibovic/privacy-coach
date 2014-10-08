@@ -41,6 +41,7 @@ XPCOMUtils.defineLazyGetter(this, "Strings", function() {
 
 // Prefix for prefs to store original user prefs.
 let PREF_PREFIX = "extensions.privacycoach.";
+let PREF_DONT_ASK_PREFIX = "extensions.privacycoach.dontAsk.";
 
 // Prefs that the add-on sets.
 let PREFS = [
@@ -95,6 +96,44 @@ let THEME = {
   accentcolor: "#363B40"
 };
 
+/**
+ * Prompt the user before performing non-https searches.
+ * @param window
+ * @param name Search engine name.
+ *
+ * @return Whether or not we should perform the serach.
+ */
+function confirmSearch(window, name) {
+  try {
+    if (Services.prefs.getBoolPref(PREF_DONT_ASK_PREFIX + name)) {
+      return true;
+    }
+  } catch(e) {}
+
+  let engine = Services.search.getEngineByName(name);
+  if (!engine) {
+    return true;
+  }
+
+  let submission = engine.getSubmission("");
+  if (submission.uri.scheme === "https") {
+    return true;
+  }
+
+  let title = Strings.GetStringFromName("httpsWarning.title");
+  let message = Strings.formatStringFromName("httpsWarning.message", [name], 1);
+  let dontAsk = Strings.GetStringFromName("httpsWarning.dontAsk");
+  let checkState = { value: false };
+  let shouldContinue = Services.prompt.confirmCheck(window, title, message, dontAsk, checkState);
+
+  // Set a pref if the user doesn't want to be asked again.
+  if (checkState.value) {
+    Services.prefs.setBoolPref(PREF_DONT_ASK_PREFIX + name, true);
+  }
+
+  return shouldContinue;
+}
+
 // Stores a reference to the original BrowserApp.observe function.
 let originalObserve;
 
@@ -108,15 +147,7 @@ function loadIntoWindow(window) {
     if (topic === "Tab:Load") {
       let d = JSON.parse(data);
       if (d.engine) {
-        let engine = Services.search.getEngineByName(d.engine);
-        if (engine) {
-          let submission = engine.getSubmission("");
-          if (submission.uri.scheme !== "https") {
-            let title = Strings.GetStringFromName("httpsWarning.title");
-            let message = Strings.formatStringFromName("httpsWarning.message", [d.engine], 1);
-            shouldContinue = Services.prompt.confirm(window, title, message);
-          }
-        }
+        shouldContinue = confirmSearch(window, d.engine);
       }
     }
 
