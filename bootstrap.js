@@ -157,11 +157,34 @@ function confirmSearch(window, name) {
   return shouldContinue;
 }
 
+/**
+ * Prompt the user before adding a non-https search engine.
+ * @param window
+ * @param url The URL for the new search engine.
+ * @param name Search engine name.
+ *
+ * @return Whether or not we should add the engine.
+ */
+function confirmAddSearchEngine(window, url, name) {
+  if (url.startsWith("https://")) {
+    return true;
+  }
+
+  let title = Strings.GetStringFromName("prompt.title");
+  let message = Strings.formatStringFromName("addEngineWarning.message", [name], 1);
+  return Services.prompt.confirm(window, title, message);
+}
+
 // Stores a reference to the original BrowserApp.observe function.
 let originalObserve;
 
-// Stored a reference to the original SearchEngines.addOpenSearchEngine.
+// Stores a reference to the original SearchEngines.addOpenSearchEngine.
+// Triggered through the Page -> Add a Search Engine item.
 let originalAddOpenSearchEngine;
+
+// Stores a reference to the original SearchEngines.originalAddEngine.
+// Triggered through the text selection action bar icon.
+let originalAddEngine;
 
 // Monkey-patching madness.
 function loadIntoWindow(window) {
@@ -184,16 +207,21 @@ function loadIntoWindow(window) {
 
   originalAddOpenSearchEngine = window.SearchEngines.addOpenSearchEngine;
   window.SearchEngines.addOpenSearchEngine = function(engine) {
-    let shouldContinue = true;
-
-    if (!engine.url.startsWith("https://")) {
-      let title = Strings.GetStringFromName("prompt.title");
-      let message = Strings.formatStringFromName("addEngineWarning.message", [engine.title], 1);
-      shouldContinue = Services.prompt.confirm(window, title, message);
-    }
-
-    if (shouldContinue) {
+    if (confirmAddSearchEngine(window, engine.url, engine.title)) {
       originalAddOpenSearchEngine.call(window.SearchEngines, engine);
+    }
+  }
+
+  originalAddEngine = window.SearchEngines.addEngine;
+  window.SearchEngines.addEngine = function(element) {
+    let form = element.form;
+    let charset = element.ownerDocument.characterSet;
+    let docURI = Services.io.newURI(element.ownerDocument.URL, charset, null);
+    let formURL = Services.io.newURI(form.getAttribute("action"), charset, docURI).spec;
+    let name = element.ownerDocument.title || docURI.host;
+
+    if (confirmAddSearchEngine(window, formURL, name)) {
+      originalAddEngine.call(window.SearchEngines, element);
     }
   }
 }
