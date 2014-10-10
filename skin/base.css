@@ -61,6 +61,7 @@
 		-webkit-text-size-adjust: 100%;
 		background-image: url('../images/noise.png'), linear-gradient(#D7D3C8, #F6F4EC 200px);
 		background-repeat: repeat;
+		padding-top:25px;
  }
 
 .footer {
@@ -158,8 +159,8 @@
 	border-radius: 50%;	/* relative value */
 	/*box-shadow: 0px 0px 5px rgba(0,0,0,0.4);*/
 	transition: linear 0.25s;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   background-color:#FF9500;
 }
 .circle img {
