@@ -9,57 +9,56 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link rel="stylesheet" href="chrome://privacycoach/skin/welcome.css" type="text/css"/>
-    <link href="chrome://privacycoach/skin/base.css" rel="stylesheet" type="text/css">
-	<link href="chrome://privacycoach/skin/skeleton.css" rel="stylesheet" type="text/css">
-	<link href="chrome://privacycoach/skin/layout.css" rel="stylesheet" type="text/css">
-     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    
+    <link href="chrome://privacycoach/skin/base.css" rel="stylesheet" type="text/css"/>
+    <link href="chrome://privacycoach/skin/skeleton.css" rel="stylesheet" type="text/css"/>
+    <link href="chrome://privacycoach/skin/layout.css" rel="stylesheet" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'/>
+
     <title>&welcome.title;</title>
 </head>
+
 <body>
 <div class="container">
- <div class="four columns">
-<img class="circle" src="images/whistle.png" "width="80" height="80" alt="Firefox Privacy Coach" "/>	
-    <h1 class="remove-bottom">
-	Firefox Privacy Coach</h1>
-	  <h5>by Mozilla</h5>
-	<hr />
+  <div class="four columns">
+    <img class="circle" src="images/whistle.png" width="80" height="80" alt="&welcome.firefoxPrivacyCoach;"/>
+    <h1 class="remove-bottom">&welcome.firefoxPrivacyCoach;</h1>
+    <h5>&welcome.byMozilla;</h5>
+    <hr/>
   </div>
-		<div class="one-third column">
-			<h3>What it does</h3>
-			<ul class="none">
-				<li><strong>Preference Tweaks</strong></li>
-              <ul class="square">
-                <li>Tracking = Do Not Track</li>
-<li>Cookies = Enabled, excluding third-party</li>
-<li>Crash reporter = disabled by default</li>
-<li>Telemetry = disabled by default</li>
-<li>Firefox Health Report = disabled by default</li>
-<li>MozStumbler = disabled by default</li> <br>            
-              </ul>Fir
-               <li><strong>Look stealth with 13fox</strong>
-                <br>A lightweight theme that's dark.
-               </li>
-              <li>
-              <strong>HTTP Warning</strong>
-              <br>
-              Instant notification if your search is going over HTTP, prohibits you from adding HTTP search engines.</li>
-			</ul>
-		</div>
-		<div class="one-third column">
-			<h3>More Information</h3>
-			<p>Even though Privacy Coach takes care of a lot of privacy-related preferences, here are a few more Add-ons that can make your browsing experience even more awesome:
-            <ul>
-            <li><a href="https://addons.mozilla.org/en-US/android/addon/ghostery/" title="Ghostery" target="new">Ghostery</a> – Protect your privacy. See who's tracking your web browsing and block them.</li>
-            <li><a href="https://www.eff.org/https-everywhere" title="HTTPS Everywhere" target="new">HTTPS Everywhere</a> – encrypts your communications with many major websites, making your browsing more secure. </li>
-            <li><a href="https://addons.mozilla.org/en-US/android/addon/self-destructing-cookies/" title="Self Destructing Cookies" target="new">Self Destructing Cookies</a> – Gets rid of a site's cookies and LocalStorage as soon as you close its tabs. Protects against trackers and zombie-cookies. Trustworthy services can be whitelisted.</li>
-            </ul> 
-          </p>
-		</div>
-
-	</div>
+  <div class="one-third column">
+    <h3>&welcome.whatItDoes;</h3>
+    <ul class="none">
+      <li><strong>&prefs.title;</strong></li>
+      <ul class="square">
+        <li>&prefs.dnt.name; = &prefs.dnt.value;</li>
+        <li>&prefs.cookies.name; = &prefs.cookies.value;</li>
+        <li>&prefs.crashReporter.name; = &prefs.crashReporter.value;</li>
+        <li>&prefs.telemetry.name; = &prefs.telemetry.value;</li>
+        <li>&prefs.fhr.name; = &prefs.fhr.value;</li>
+        <li>&prefs.stumbler.name; = &prefs.stumbler.value;</li>
+      </ul><br/>
+      <li>
+        <strong>&theme.title;</strong>
+        <br/>&theme.description;
+      </li>
+      <li>
+        <strong>&httpWarning.title;</strong>
+        <br/>&httpWarning.description;
+      </li>
+    </ul>
+  </div>
+  <div class="one-third column">
+    <h3>&moreInfo.title;</h3>
+    <p>&moreInfo.description;</p>
+    <ul>
+      <li><a href="https://addons.mozilla.org/android/addon/ghostery/" title="&addon.ghostery.title;" target="new">&addon.ghostery.title;</a> – &addon.ghostery.description;</li>
+      <li><a href="https://www.eff.org/https-everywhere" title="&addon.https.title;" target="new">&addon.https.title;</a> – &addon.https.description;</li>
+      <li><a href="https://addons.mozilla.org/android/addon/self-destructing-cookies/" title="&addon.sdc.title;" target="new">&addon.sdc.title;</a> – &addon.sdc.description;</li>
+    </ul>
+  </div>
+</div>
 
 <div class="footer">
 </div>
