@@ -9,4 +9,9 @@ body {
 .pref-value {
   font-weight: bold;
   margin-top: 5px;
+  display: flex;
+}
+
+.pref-value > button {
+  -moz-margin-start: 5px;
 }

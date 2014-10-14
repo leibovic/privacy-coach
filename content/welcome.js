@@ -116,6 +116,13 @@ function initPrefsList() {
     let value = document.createElement("div");
     value.textContent = "Current value: " + pref.value;
     value.classList.add("pref-value");
+
+    let button = document.createElement("button");
+    button.textContent = "Change";
+    button.addEventListener("click", openSettings, false);
+
+    value.appendChild(button);
+
     li.appendChild(value);
 
     prefsList.appendChild(li);
@@ -123,47 +130,38 @@ function initPrefsList() {
 }
 
 /**
- * Uses JNI to broadcast changes to data reporting preferences.
- *
- * GeckoPreferences.broadcastHealthReportUploadPref(context);
- * GeckoPreferences.broadcastStumblerPref(context);
+ * Uses JNI to open settings.
  */
-function broadcastSharedPrefs() {
-  let v = Services.appinfo.version;
-  let version = parseInt(v.substring(0, v.indexOf(".")))
+function openSettings() {
 
   let jenv;
   try {
     jenv = JNI.GetForThread();
-    let geckoAppShell = JNI.LoadClass(jenv, "org.mozilla.gecko.GeckoAppShell", {
+
+    let GeckoAppShell = JNI.LoadClass(jenv, "org.mozilla.gecko.GeckoAppShell", {
       static_methods: [
         { name: "getContext", sig: "()Landroid/content/Context;" },
       ],
     });
+    let Intent = JNI.LoadClass(jenv, "android.content.Intent", {
+      constructors: [
+        { name: "<init>", sig: "(Landroid/content/Context;Ljava/lang/Class;)V" },
+      ],
+    });
+    let GeckoPreferences = JNI.LoadClass(jenv, "org.mozilla.gecko.preferences.GeckoPreferences", {
+      static_methods: [
+        { name: "setResourceToOpen", sig: "(Landroid/content/Intent;Ljava/lang/String;)V" },
+      ],
+      methods: [
+        { name: "getClass", sig: "()Ljava/lang/Class;" },
+      ],
+    });
 
-    let context = geckoAppShell.getContext();
+    let context = GeckoAppShell.getContext();
+    let intent = Intent["new"](context, GeckoPreferences.getClass());
+    GeckoPreferences.setResourceToOpen(intent, "preferences_privacy");
+    context.startActivity(intent);
 
-    // The stumbler pref was only added in Fx35.
-    if (version >= 35) {
-      let geckoPreferences = JNI.LoadClass(jenv, "org.mozilla.gecko.preferences.GeckoPreferences", {
-        static_methods: [
-          { name: "broadcastHealthReportUploadPref", sig: "(Landroid/content/Context;)V" },
-          { name: "broadcastStumblerPref", sig: "(Landroid/content/Context;)V" },
-        ],
-      });
-      geckoPreferences.broadcastHealthReportUploadPref(context);
-      geckoPreferences.broadcastStumblerPref(context);
-    } else {
-      let geckoPreferences = JNI.LoadClass(jenv, "org.mozilla.gecko.preferences.GeckoPreferences", {
-        static_methods: [
-          { name: "broadcastHealthReportUploadPref", sig: "(Landroid/content/Context;)V" },
-        ],
-      });
-      geckoPreferences.broadcastHealthReportUploadPref(context);
-    }
-
-  } catch (e) {
-    Cu.reportError("Exception broadcasting shared pref change: " + e);
   } finally {
     if (jenv) {
       JNI.UnloadClasses(jenv);
