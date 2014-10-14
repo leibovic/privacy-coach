@@ -27,30 +27,13 @@
     <hr/>
   </div>
   <div class="one-third column">
-    <h3>&welcome.whatItDoes;</h3>
-    <ul class="none">
-      <li><strong>&prefs.title;</strong></li>
-      <ul class="square">
-        <li>&prefs.dnt.name; = &prefs.dnt.value;</li>
-        <li>&prefs.cookies.name; = &prefs.cookies.value;</li>
-        <li>&prefs.crashReporter.name; = &prefs.crashReporter.value;</li>
-        <li>&prefs.telemetry.name; = &prefs.telemetry.value;</li>
-        <li>&prefs.fhr.name; = &prefs.fhr.value;</li>
-        <li>&prefs.stumbler.name; = &prefs.stumbler.value;</li>
-      </ul><br/>
-      <li>
-        <strong>&theme.title;</strong>
-        <br/>&theme.description;
-      </li>
-      <li>
-        <strong>&httpWarning.title;</strong>
-        <br/>&httpWarning.description;
-      </li>
-    </ul>
+    <h3>Privacy Preferences</h3>
+    <p>Here's a list of some browser preferences that affect your privacy.</p>
+    <ul id="prefs"/>
   </div>
   <div class="one-third column">
-    <h3>&moreInfo.title;</h3>
-    <p>&moreInfo.description;</p>
+    <h3>Additional Add-ons</h3>
+    <p>Here are some more privacy-related add-ons you can install.</p>
     <ul>
       <li><a href="https://addons.mozilla.org/android/addon/ghostery/" title="&addon.ghostery.title;" target="new">&addon.ghostery.title;</a> – &addon.ghostery.description;</li>
       <li><a href="https://www.eff.org/https-everywhere" title="&addon.https.title;" target="new">&addon.https.title;</a> – &addon.https.description;</li>
@@ -61,5 +44,8 @@
 
 <div class="footer">
 </div>
+
+<script type="application/javascript;version=1.8" src="chrome://privacycoach/content/welcome.js"></script>
+
 </body>
 </html>
