@@ -49,7 +49,8 @@ let gPrefs = [
         return "Tell sites that I want to be tracked";
       }
       return "Tell sites that I do not want to be tracked";
-    }
+    },
+    page: "preferences_privacy"
   },
   {
     label: "Cookies",
@@ -63,7 +64,8 @@ let gPrefs = [
         return "Enabled, excluding 3rd party";
       }
       return "Disabled";
-    }
+    },
+    page: "preferences_privacy"
   },
   {
     label: "Firefox Health Report",
@@ -71,7 +73,8 @@ let gPrefs = [
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.healthreport.uploadEnabled");
       return val ? "Enabled" : "Disabled";
-    }
+    },
+    page: "preferences_vendor"
   },
   {
     label: "Telemetry",
@@ -79,7 +82,8 @@ let gPrefs = [
     get value() {
       let val = Services.prefs.getBoolPref("toolkit.telemetry.enabled");
       return val ? "Enabled" : "Disabled";
-    }
+    },
+    page: "preferences_vendor"
   },
   {
     label: "Crash reporter",
@@ -87,7 +91,8 @@ let gPrefs = [
     get value() {
       let val = CrashReporter.submitReports;
       return val ? "Enabled" : "Disabled";
-    }
+    },
+    page: "preferences_vendor"
   },
   {
     label: "MozStumbler",
@@ -95,7 +100,8 @@ let gPrefs = [
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.app.geo.reportdata");
       return val ? "Enabled" : "Disabled";
-    }
+    },
+    page: "preferences_vendor"
   }
 ];
 
@@ -122,7 +128,7 @@ function initPrefsList() {
 
     let button = document.createElement("button");
     button.textContent = "Change";
-    button.addEventListener("click", openSettings, false);
+    button.addEventListener("click", () => openPrefPage(pref.page), false);
     valueContainer.appendChild(button);
 
     li.appendChild(valueContainer);
@@ -134,7 +140,7 @@ function initPrefsList() {
 /**
  * Uses JNI to open settings.
  */
-function openSettings() {
+function openPrefPage(page) {
 
   let jenv;
   try {
@@ -163,7 +169,7 @@ function openSettings() {
 
     let context = GeckoAppShell.getContext();
     let intent = Intent["new"](context, GeckoPreferences);
-    GeckoPreferences.setResourceToOpen(intent, "preferences_privacy");
+    GeckoPreferences.setResourceToOpen(intent, page);
     context.startActivity(intent);
 
   } finally {
