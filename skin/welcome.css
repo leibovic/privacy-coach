@@ -12,6 +12,10 @@ body {
   display: flex;
 }
 
+.pref-value > div {
+  flex: 1;
+}
+
 .pref-value > button {
   -moz-margin-start: 5px;
 }

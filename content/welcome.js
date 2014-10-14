@@ -113,17 +113,19 @@ function initPrefsList() {
     desc.textContent = pref.description;
     li.appendChild(desc);
 
+    let valueContainer = document.createElement("div");
+    valueContainer.classList.add("pref-value");
+
     let value = document.createElement("div");
     value.textContent = "Current value: " + pref.value;
-    value.classList.add("pref-value");
+    valueContainer.appendChild(value);
 
     let button = document.createElement("button");
     button.textContent = "Change";
     button.addEventListener("click", openSettings, false);
+    valueContainer.appendChild(button);
 
-    value.appendChild(button);
-
-    li.appendChild(value);
+    li.appendChild(valueContainer);
 
     prefsList.appendChild(li);
   });
@@ -152,13 +154,15 @@ function openSettings() {
       static_methods: [
         { name: "setResourceToOpen", sig: "(Landroid/content/Intent;Ljava/lang/String;)V" },
       ],
+    });
+    let Context = JNI.LoadClass(jenv, "android.content.Context", {
       methods: [
-        { name: "getClass", sig: "()Ljava/lang/Class;" },
+        { name: "startActivity", sig: "(Landroid/content/Intent;)V" },
       ],
     });
 
     let context = GeckoAppShell.getContext();
-    let intent = Intent["new"](context, GeckoPreferences.getClass());
+    let intent = Intent["new"](context, GeckoPreferences);
     GeckoPreferences.setResourceToOpen(intent, "preferences_privacy");
     context.startActivity(intent);
 
