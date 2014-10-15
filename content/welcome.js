@@ -110,12 +110,11 @@ function initPrefsList() {
   gPrefs.forEach(function(pref) {
     let li = document.createElement("li");
 
-    let label = document.createElement("div");
+    let label = document.createElement("h4");
     label.textContent = pref.label;
-    label.classList.add("pref-label");
     li.appendChild(label);
 
-    let desc = document.createElement("div");
+    let desc = document.createElement("p");
     desc.textContent = pref.description;
     li.appendChild(desc);
 
@@ -158,6 +157,11 @@ function initSearchMessage() {
     button.addEventListener("click", () => openPrefPage("preferences_search"), false);
     searchMessage.appendChild(button);
   });
+}
+
+function initClearOnExit() {
+  let button = document.getElementById("clear-on-exit");
+  button.addEventListener("click", () => openPrefPage("preferences_privacy"), false);
 }
 
 /**
@@ -205,4 +209,5 @@ function openPrefPage(page) {
 document.addEventListener("DOMContentLoaded", function() {
   initPrefsList();
   initSearchMessage();
+  initClearOnExit();
 }, false);

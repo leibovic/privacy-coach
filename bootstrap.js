@@ -19,24 +19,24 @@ let gBannerId;
 
 let gBannerMessages = [
   {
-    text: "Learn how to automatically delete your data every time you quit Firefox.",
-    url: "https://support.mozilla.org/en-US/kb/clear-your-browsing-history-and-other-personal-dat"
+    text: "Learn the different ways you can clear personal data stored in Firefox.",
+    url: "https://support.mozilla.org/kb/clear-your-browsing-history-and-other-personal-dat"
   },
   {
     text: "Learn how to create secure, easy-to-remember passwords to keep your identity safe on the internet.",
-    url: "https://support.mozilla.org/en-US/kb/create-secure-passwords-keep-your-identity-safe"
+    url: "https://support.mozilla.org/kb/create-secure-passwords-keep-your-identity-safe"
   },
   {
     text: "Learn how Firefox Health Report lets you know how well your browser is performing and what steps you can take to improve it.",
-    url: "https://support.mozilla.org/en-US/kb/firefox-health-report-understand-your-android-browser-perf"
+    url: "https://support.mozilla.org/kb/firefox-health-report-understand-your-android-browser-perf"
   },
   {
     text: "Learn how Firefox for Android automatically blocks insecure or mixed content from secure web pages.",
-    url: "https://support.mozilla.org/en-US/kb/how-does-insecure-content-affect-safety-android"
+    url: "https://support.mozilla.org/kb/how-does-insecure-content-affect-safety-android"
   },
   {
     text: "Learn how to create a Guest Session to let someone else use Firefox without giving them access to your personal information.",
-    url: "https://support.mozilla.org/en-US/kb/share-your-android-device-firefox-guest-session"
+    url: "https://support.mozilla.org/kb/share-your-android-device-firefox-guest-session"
   }
 ];
 
