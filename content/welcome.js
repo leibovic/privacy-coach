@@ -137,6 +137,13 @@ function initPrefsList() {
   });
 }
 
+function initSearchMessage() {
+  Services.search.init(() => {
+    let searchMessage = document.getElementById("search-message");
+    
+  });
+}
+
 /**
  * Uses JNI to open settings.
  */
@@ -181,4 +188,5 @@ function openPrefPage(page) {
 
 document.addEventListener("DOMContentLoaded", function() {
   initPrefsList();
+  initSearchMessage();
 }, false);

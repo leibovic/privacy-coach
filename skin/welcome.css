@@ -19,3 +19,7 @@ body {
 .pref-value > button {
   -moz-margin-start: 5px;
 }
+
+.search-message {
+  font-weight: bold;
+}
