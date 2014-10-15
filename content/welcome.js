@@ -94,7 +94,7 @@ function refreshPrefValues() {
   });
 }
 
-function initSearchMessage() {
+function refreshSearchMessage() {
   Services.search.init(() => {
     let searchMessage = document.getElementById("search-audit");
     let engine = Services.search.defaultEngine;
@@ -186,12 +186,13 @@ let PrefObserver = {
   observe: function(s, t, d) {
     // Lazy. Just refresh all the pref values.
     refreshPrefValues();
+    refreshSearchMessage();
   }
 };
 
 document.addEventListener("DOMContentLoaded", function() {
   refreshPrefValues();
-  initSearchMessage();
+  refreshSearchMessage();
   initButtons();
 
   PrefObserver.init();
