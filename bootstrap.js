@@ -38,6 +38,10 @@ let gBannerMessages = [
   {
     text: "Learn how to create a Guest Session to let someone else use Firefox without giving them access to your personal information.",
     url: "https://support.mozilla.org/kb/share-your-android-device-firefox-guest-session"
+  },
+  {
+    text: "Learn how to create private tabs to browse the internet without saving any information about what pages you've visited.",
+    url: "https://support.mozilla.org/kb/mobile-private-browsing-browse-web-without-saving-syncing-info"
   }
 ];
 
