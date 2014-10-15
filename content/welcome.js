@@ -138,30 +138,25 @@ function initPrefsList() {
 
 function initSearchMessage() {
   Services.search.init(() => {
-    let searchMessage = document.getElementById("search-message");
-
-    let div = document.createElement("div");
+    let searchMessage = document.getElementById("search-audit");
     let engine = Services.search.defaultEngine;
 
     if (engine.getSubmission("").uri.scheme === "https") {
-      div.textContent = "Excellent! Your default search engine (" + engine.name + ") uses HTTPS.";
+      searchMessage.textContent = "Your default search engine (" + engine.name + ") uses HTTPS, so you're already secure.";
     } else {
-      div.classList.add("warn");
-      div.textContent = "Watch out! Your default search engine (" + engine.name + ") doesn't use HTTPS."
+      searchMessage.classList.add("warn");
+      searchMessage.textContent = "Your default search engine (" + engine.name + ") doesn't use HTTPS, so you may want to change your default now."
     }
-
-    searchMessage.appendChild(div);
-
-    let button = document.createElement("button");
-    button.textContent = "Change";
-    button.addEventListener("click", () => openPrefPage("preferences_search"), false);
-    searchMessage.appendChild(button);
   });
 }
 
-function initClearOnExit() {
-  let button = document.getElementById("clear-on-exit");
-  button.addEventListener("click", () => openPrefPage("preferences_privacy"), false);
+function initButtons() {
+  let buttons = document.querySelectorAll(".settings-button");
+  for (let i = 0; i < buttons.length; i++) {
+    let button = buttons[i];
+    let page = button.getAttribute("page");
+    button.addEventListener("click", () => openPrefPage(page), false);
+  }
 }
 
 /**
@@ -209,5 +204,5 @@ function openPrefPage(page) {
 document.addEventListener("DOMContentLoaded", function() {
   initPrefsList();
   initSearchMessage();
-  initClearOnExit();
+  initButtons();
 }, false);

@@ -25,17 +25,17 @@
 <!ENTITY httpWarning.title              "HTTP Warning">
 <!ENTITY httpWarning.description        "Instant notification if your search is going over HTTP, prohibits you from adding HTTP search engines.">
 
-<!ENTITY moreInfo.title                 "More Information">
-<!ENTITY moreInfo.description           "Even though Privacy Coach takes care of a lot of privacy-related preferences, here are a few more Add-ons that can make your browsing experience even more awesome:">
+<!ENTITY moreAddons.title               "Additional Add-ons">
+<!ENTITY moreAddons.description         "Even though Privacy Coach takes care of a lot of privacy-related preferences, here are a few more Add-ons that can make your browsing experence even more awesome:">
 
 <!-- https://addons.mozilla.org/android/addon/ghostery/ -->
 <!ENTITY addon.ghostery.title           "Ghostery">
 <!ENTITY addon.ghostery.description     "Protect your privacy. See who's tracking your web browsing and block them.">
 
 <!-- https://www.eff.org/https-everywhere -->
-<!ENTITY addon.https.title                "HTTPS Everywhere">
-<!ENTITY addon.https.description          "encrypts your communications with many major websites, making your browsing more secure. ">
+<!ENTITY addon.https.title               "HTTPS Everywhere">
+<!ENTITY addon.https.description         "encrypts your communications with many major websites, making your browsing more secure. ">
 
 <!-- https://addons.mozilla.org/android/addon/self-destructing-cookies/ -->
-<!ENTITY addon.sdc.title                  "Self Destructing Cookies">
-<!ENTITY addon.sdc.description            "Gets rid of a site's cookies and LocalStorage as soon as you close its tabs. Protects against trackers and zombie-cookies. Trustworthy services can be whitelisted.">
+<!ENTITY addon.sdc.title                 "Self Destructing Cookies">
+<!ENTITY addon.sdc.description           "Gets rid of a site's cookies and LocalStorage as soon as you close its tabs. Protects against trackers and zombie-cookies. Trustworthy services can be whitelisted.">

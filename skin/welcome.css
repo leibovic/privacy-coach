@@ -16,6 +16,10 @@ body {
   -moz-margin-start: 5px;
 }
 
-#clear-on-exit {
+.settings-button {
   width: 100%;
+}
+
+.warn {
+  font-weight: bold;
 }

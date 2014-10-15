@@ -27,18 +27,20 @@
     <hr/>
   </div>
   <div class="one-third column">
+    <p>Welcome to the Firefox Privacy Coach! This add-on will teach you about the privacy features that Firefox has to offer.</p>
+
     <h2>Privacy Preferences</h2>
-    <p>Here's a list of some browser preferences that affect your privacy.</p>
+    <p>Firefox allows you to customize preferences that affect your privacy. We've broken down this list of preferences to explain what they actually mean and help you figure out what setting is right for you.</p>
     <ul id="prefs"/>
-  </div>
-  <div class="one-third column">
+
     <h2>HTTPS Search</h2>
-    <p>To keep your searches private, you should make sure to use search engines that support HTTPS.</p>
-    <div id="search-message" class="pref-value"/>
-    <p>We'll prompt you before you make a search that goes over HTTP, and we'll also warn you if you try to make an HTTP search engine your default.</p>
+    <p>To keep your searches private, you should make sure to use search engines that support HTTPS. We'll prompt you before you make a search that goes over HTTP, and we'll also warn you if you try to make an HTTP search engine your default.</p>
+    <p>You can change your default search engine at any time in the search settings page. <span id="search-audit" /></p>
+    <button class="settings-button" page="preferences_search">Search Settings</button>
+
   </div>
   <div class="one-third column">
-    <h2>Privacy Features</h2>
+    <h2>Other Privacy Features</h2>
     <p>In addition to cutomizable privacy preferences, Firefox also includes features that you can use to keep your data private.</p>
     <ul>
       <li>
@@ -53,13 +55,12 @@
         <h4>Clear History and Other Data</h4>
         <p>Firefox offers you control over your personal data, such as browsing history, passwords and more. You can conveniently save this data to your browser and delete it any time you want to. <a href="https://support.mozilla.org/kb/clear-your-browsing-history-and-other-personal-dat" target="new">Learn more</a>.</p>
         <p>In your privacy settings, you can also choose to clear private data every time you select "Quit" from the main menu.</p>
-        <button id="clear-on-exit">Open Privacy Settings</button>
+        <button class="settings-button" page="preferences_privacy">Privacy Settings</button>
       </li>
     </ul>
-  </div>
-  <div class="one-third column">
-    <h2>Additional Add-ons</h2>
-    <p>Here are some more privacy-related add-ons you can install.</p>
+
+    <h2>&moreAddons.title;</h2>
+    <p>&moreAddons.description;</p>
     <ul>
       <li><a href="https://addons.mozilla.org/android/addon/ghostery/" title="&addon.ghostery.title;" target="new">&addon.ghostery.title;</a> – &addon.ghostery.description;</li>
       <li><a href="https://www.eff.org/https-everywhere" title="&addon.https.title;" target="new">&addon.https.title;</a> – &addon.https.description;</li>
