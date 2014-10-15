@@ -19,11 +19,3 @@ body {
 .pref-value > button {
   -moz-margin-start: 5px;
 }
-
-.theme-preview {
-  height: 64px;
-  width: 100%;
-  background: none no-repeat scroll right top transparent;
-  border-radius: 3px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}

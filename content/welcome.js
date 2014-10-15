@@ -105,63 +105,6 @@ let gPrefs = [
   }
 ];
 
-let gThemes = [
-  {
-    category: "None",
-    iconURL: "https://addons.cdn.mozilla.net/user-media/addons/18066/preview_small.jpg?1241572934",
-    headerURL: "https://addons.cdn.mozilla.net/user-media/addons/18066/1232849758499.jpg?1241572934",
-    name: "Dark Fox",
-    author: "randomaster",
-    footer: "https://addons.cdn.mozilla.net/user-media/addons/18066/1232849758500.jpg?1241572934",
-    previewURL: "https://addons.cdn.mozilla.net/user-media/addons/18066/preview_large.jpg?1241572934",
-    updateURL: "https://versioncheck.addons.mozilla.org/en-US/themes/update-check/18066",
-    accentcolor: "#000000",
-    header: "https://addons.cdn.mozilla.net/user-media/addons/18066/1232849758499.jpg?1241572934",
-    version: "1.0",
-    footerURL: "https://addons.cdn.mozilla.net/user-media/addons/18066/1232849758500.jpg?1241572934",
-    detailURL: "https://addons.mozilla.org/en-US/android/addon/dark-fox-18066/",
-    textcolor: "#ffffff",
-    id: "18066",
-    description: "My dark version of the Firefox logo."
-  },
-  {
-    category: "Nature",
-    iconURL: "https://addons.cdn.mozilla.net/user-media/addons/60179/preview_small.jpg?1353185054",
-    headerURL: "https://addons.cdn.mozilla.net/user-media/addons/60179/dupa.jpg?1353185054",
-    name: "little flowers",
-    author: "bluszcz",
-    footer: "https://addons.cdn.mozilla.net/user-media/addons/60179/Beznazwy1.jpg?1353185054",
-    previewURL: "https://addons.cdn.mozilla.net/user-media/addons/60179/preview_large.jpg?1353185054",
-    updateURL: "https://versioncheck.addons.mozilla.org/en-US/themes/update-check/60179",
-    accentcolor: "#",
-    header: "https://addons.cdn.mozilla.net/user-media/addons/60179/dupa.jpg?1353185054",
-    version: "1.0",
-    footerURL: "https://addons.cdn.mozilla.net/user-media/addons/60179/Beznazwy1.jpg?1353185054",
-    detailURL: "https://addons.mozilla.org/en-US/android/addon/little-flowers/",
-    textcolor: "#",
-    id: "60179",
-    description: ""
-  },
-  {
-    category: "None",
-    iconURL: "https://addons.cdn.mozilla.net/user-media/addons/46852/preview_small.jpg?1377881898",
-    headerURL: "https://addons.cdn.mozilla.net/user-media/addons/46852/NSH.jpg?1377881898",
-    name: "Sunset Over Water",
-    author: "MaDonna",
-    footer: "https://addons.cdn.mozilla.net/user-media/addons/46852/NSF.jpg?1377881898",
-    previewURL: "https://addons.cdn.mozilla.net/user-media/addons/46852/preview_large.jpg?1377881898",
-    updateURL: "https://versioncheck.addons.mozilla.org/en-US/themes/update-check/46852",
-    accentcolor: "#000000",
-    header: "https://addons.cdn.mozilla.net/user-media/addons/46852/NSH.jpg?1377881898",
-    version: "1.0",
-    footerURL: "https://addons.cdn.mozilla.net/user-media/addons/46852/NSF.jpg?1377881898",
-    detailURL: "https://addons.mozilla.org/en-US/android/addon/sunset-over-water/",
-    textcolor: "#faf5f5",
-    id: "46852",
-    description: "This is a photo I took on Chuckanut Drive in Washington state.\n© MaDonnas Personas\n\nDesigned by MaDonna\n\nI have a desktop wallpaper that matches and you can find it at:\n<a href=\"http://outgoing.mozilla.org/v1/1687c5b2724e719966c797b44e3eb79ba02fae6f32729b1c7344a911ba8449ea/http%3A//nature.desktopnexus.com/wallpaper/335230/\" rel=\"nofollow\">http://nature.desktopnexus.com/wallpaper/335230/</a>"
-  }
-];
-
 function initPrefsList() {
   let prefsList = document.getElementById("prefs");
   gPrefs.forEach(function(pref) {
@@ -194,27 +137,11 @@ function initPrefsList() {
   });
 }
 
-function initThemesList() {
-  let themesList = document.getElementById("themes");
-  gThemes.forEach(function(theme) {
-    let li = document.createElement("li");
-
-    let preview = document.createElement("div");
-    preview.classList.add("theme-preview");
-    preview.style.backgroundImage = "url(" + theme.previewURL + ")";
-    preview.addEventListener("click", () => LightweightThemeManager.previewTheme(theme), false);
-
-    li.appendChild(preview);
-
-    themesList.appendChild(li);
-  });
-}
-
-
 /**
  * Uses JNI to open settings.
  */
 function openPrefPage(page) {
+
   let jenv;
   try {
     jenv = JNI.GetForThread();
@@ -254,5 +181,4 @@ function openPrefPage(page) {
 
 document.addEventListener("DOMContentLoaded", function() {
   initPrefsList();
-  initThemesList();
 }, false);
