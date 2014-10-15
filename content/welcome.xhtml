@@ -36,9 +36,9 @@
         <h4>Do Not Track</h4>
         <p>DNT lets your browser tell websites that you do not want to be tracked.</p>
         <ul class="pref-value-list square" pref="dnt">
-          <li>Tell sites that I do not want to be tracked: ...</li>
-          <li>Tell sites that I want to be tracked: ...</li>
-          <li>Do not tell sites anything about my tracking preferences: ...</li>
+          <li>Tell sites that I do not want to be tracked: Firefox will send an HTTP header that requests that sites disable tracking.</li>
+          <li>Tell sites that I want to be tracked: Firefox will tell sites that you are okay with being tracked.</li>
+          <li>Do not tell sites anything about my tracking preferences: Firefox won't tell sites anything about your tracking preferences.</li>
         </ul>
         <button class="settings-button" page="preferences_privacy">Privacy Settings</button>
       </li>
@@ -46,9 +46,9 @@
         <h4>Cookies</h4>
         <p>Cookies let websites store small pieces of data in your browser to rememeber state when you navigate between webpages. However, this means they can also be used to track you.</p>
         <ul class="pref-value-list square" pref="cookies">
-          <li>Enabled: ...</li>
-          <li>Enabled, excluding 3rd party: ...</li>
-          <li>Disabled: ...</li>
+          <li>Enabled: This means all websites can store cookies.</li>
+          <li>Enabled, excluding 3rd party: This means websites can store cookies, but their third-party content, such as embedded ads, won't be able to store cookies.</li>
+          <li>Disabled: Websites won't be able to store any cookies. Although this protects you from tracking, this will break a lot of websites.</li>
         </ul>
         <button class="settings-button" page="preferences_privacy">Privacy Settings</button>
       </li>
@@ -56,8 +56,8 @@
         <h4>Firefox Health Report</h4>
         <p>FHR shares data with Mozilla about your browser health and helps you understand your browser performance.</p>
         <ul class="pref-value-list square" pref="fhr">
-          <li>Enabled: ...</li>
-          <li>Disabled: ...</li>
+          <li>Enabled: Firefox will send data to Mozilla's servers.</li>
+          <li>Disabled: Firefox won't send anything.</li>
         </ul>
         <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
       </li>
@@ -65,8 +65,8 @@
         <h4>Telemetry</h4>
         <p>Telemetry shares more detailed performance, usage, hardware and customization data about your browser with Mozilla to help us make the browser better.</p>
         <ul class="pref-value-list square" pref="telemetry">
-          <li>Enabled: ...</li>
-          <li>Disabled: ...</li>
+          <li>Enabled: Firefox will send data to Mozilla's servers.</li>
+          <li>Disabled: Firefox won't send anything.</li>
         </ul>
         <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
       </li>
@@ -74,8 +74,8 @@
         <h4>Crash Reporter</h4>
         <p>The crash reporter lets you choose to submit crash reports to Mozilla to help us make the browser more stable and secure.</p>
         <ul class="pref-value-list square" pref="crash">
-          <li>Enabled: ...</li>
-          <li>Disabled: ...</li>
+          <li>Enabled: Firefox will prompt you to send a report to Mozilla whenever your browser crashes. This can help the engineers at Mozilla make your browser, but it may include some personal data, such as URLs you've visited.</li>
+          <li>Disabled: Firefox won't ask you if you want to send a crash report.</li>
         </ul>
         <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
       </li>
@@ -83,8 +83,8 @@
         <h4>MozStumbler</h4>
         <p>The MozStumbler shares approximate Wi-Fi and cellular location with Mozilla to help improve our geolocation service.</p>
         <ul class="pref-value-list square" pref="stumbler">
-          <li>Enabled: ...</li>
-          <li>Disabled: ...</li>
+          <li>Enabled: Firefox will send geolocation data to Mozilla's servers.</li>
+          <li>Disabled: Firefox won't send anything.</li>
         </ul>
         <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
       </li>
