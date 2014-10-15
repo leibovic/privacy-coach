@@ -140,7 +140,23 @@ function initPrefsList() {
 function initSearchMessage() {
   Services.search.init(() => {
     let searchMessage = document.getElementById("search-message");
-    
+
+    let div = document.createElement("div");
+    let engine = Services.search.defaultEngine;
+
+    if (engine.getSubmission("").uri.scheme === "https") {
+      div.textContent = "Excellent! Your default search engine (" + engine.name + ") uses HTTPS.";
+    } else {
+      div.classList.add("warn");
+      div.textContent = "Watch out! Your default search engine (" + engine.name + ") doesn't use HTTPS."
+    }
+
+    searchMessage.appendChild(div);
+
+    let button = document.createElement("button");
+    button.textContent = "Change";
+    button.addEventListener("click", () => openPrefPage("preferences_search"), false);
+    searchMessage.appendChild(button);
   });
 }
 
