@@ -16,6 +16,7 @@ XPCOMUtils.defineLazyGetter(this, "Strings", function() {
 });
 
 let gBannerId;
+let gMenuId;
 
 let gBannerMessages = [
   {
@@ -169,12 +170,22 @@ function loadIntoWindow(window) {
       originalAddEngine.call(window.SearchEngines, element);
     }
   }
+
+  // Add menu item to get back to welcome page.
+  gMenuId = window.NativeWindow.menu.add({
+    name: "Privacy Coach",
+    parent: window.NativeWindow.menu.toolsMenuID,
+    callback: () => window.BrowserApp.addTab("chrome://privacycoach/content/welcome.xhtml")
+  });
 }
 
 function unloadFromWindow(window) {
   window.BrowserApp.observe = originalObserve;
   window.SearchEngines.addOpenSearchEngine = originalAddOpenSearchEngine;
   window.SearchEngines.addEngine = originalAddEngine;
+
+  // Remove menu item to get back to welcome page.
+  window.NativeWindow.menu.remove(gMenuId);
 }
 
 /**
