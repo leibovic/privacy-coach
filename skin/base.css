@@ -59,7 +59,7 @@
 		color: #333;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
-		background-image: url('../images/noise.png'), linear-gradient(#D7D3C8, #F6F4EC 200px);
+		background-image: url('chrome://privacycoach/content/images/noise.png'), linear-gradient(#D7D3C8, #F6F4EC 200px);
 		background-repeat: repeat;
 		padding-top:25px;
  }
