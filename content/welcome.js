@@ -40,13 +40,13 @@ let gPrefs = {
     get value() {
       let enableDNT = Services.prefs.getBoolPref("privacy.donottrackheader.enabled");
       if (!enableDNT) {
-        return 0;
+        return 2; // "Do not tell site anything"
       }
       let dntState = Services.prefs.getIntPref("privacy.donottrackheader.value");
       if (dntState === 0) {
-        return 1;
+        return 1; // Allow tracking
       }
-      return 2;
+      return 0; // Do not allow tracking
     }
   },
   cookies: {
@@ -80,13 +80,18 @@ let gPrefs = {
   }
 };
 
-function initPrefValues() {
+function refreshPrefValues() {
   let uls = document.querySelectorAll(".pref-value-list");
-  for (let i = 0; i < uls.length; i++) {
-    let list = uls[i];
-    let pref = gPrefs[list.getAttribute("pref")];
-    list.children[pref.value].classList.add("current-value");
-  }
+  Array.prototype.forEach.call(uls, function(list) {
+    let value = gPrefs[list.getAttribute("pref")].value;
+    Array.prototype.forEach.call(list.children, function(child, i) {
+      if (i == value) {
+        child.classList.add("current-value");
+      } else {
+        child.classList.remove("current-value");
+      }
+    });
+  });
 }
 
 function initSearchMessage() {
@@ -154,8 +159,42 @@ function openPrefPage(page) {
   }
 }
 
+let PrefObserver = {
+  _sharedPrefs: [
+    "android.not_a_preference.healthreport.uploadEnabled",
+    "android.not_a_preference.app.geo.reportdata",
+    "datareporting.crashreporter.submitEnabled"
+  ],
+
+  init: function() {
+    // Lazy. Just listen to changes to any prefs.
+    Services.prefs.addObserver("", this, false);
+
+    this._sharedPrefs.forEach((pref) => {
+      SharedPreferences.forApp().addObserver(pref, this);
+    });
+  },
+
+  uninit: function() {
+    Services.prefs.removeObserver("", this);
+
+    this._sharedPrefs.forEach((pref) => {
+      SharedPreferences.forApp().removeObserver(pref, this);
+    });
+  },
+
+  observe: function(s, t, d) {
+    // Lazy. Just refresh all the pref values.
+    refreshPrefValues();
+  }
+};
+
 document.addEventListener("DOMContentLoaded", function() {
-  initPrefValues();
+  refreshPrefValues();
   initSearchMessage();
   initButtons();
+
+  PrefObserver.init();
 }, false);
+
+document.addEventListener("unload", PrefObserver.uninit, false);
