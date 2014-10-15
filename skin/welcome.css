@@ -2,18 +2,13 @@ body {
   font-family: "Clear Sans", sans-serif;
 }
 
-.pref-value {
-  margin-top: 5px;
-  display: flex;
+.pref-value-list {
+  margin: 0 10px 20px 10px;
+  font-size: 100%;
 }
 
-.pref-value > div {
+.current-value {
   font-weight: bold;
-  flex: 1;
-}
-
-.pref-value > button {
-  -moz-margin-start: 5px;
 }
 
 .settings-button {

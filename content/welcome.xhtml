@@ -31,7 +31,64 @@
 
     <h2>Privacy Preferences</h2>
     <p>Firefox allows you to customize preferences that affect your privacy. We've broken down this list of preferences to explain what they actually mean and help you figure out what setting is right for you.</p>
-    <ul id="prefs"/>
+    <ul>
+      <li>
+        <h4>Do Not Track</h4>
+        <p>DNT lets your browser tell websites that you do not want to be tracked.</p>
+        <ul class="pref-value-list square" pref="dnt">
+          <li>Do not tell sites anything about my tracking preferences: ...</li>
+          <li>Tell sites that I do not want to be tracked: ...</li>
+          <li>Tell sites that I want to be tracked: ...</li>
+        </ul>
+        <button class="settings-button" page="preferences_privacy">Privacy Settings</button>
+      </li>
+      <li>
+        <h4>Cookies</h4>
+        <p>Cookies let websites store small pieces of data in your browser to rememeber state when you navigate between webpages. However, this means they can also be used to track you.</p>
+        <ul class="pref-value-list square" pref="cookies">
+          <li>Enabled: ...</li>
+          <li>Enabled, excluding 3rd party: ...</li>
+          <li>Disabled: ...</li>
+        </ul>
+        <button class="settings-button" page="preferences_privacy">Privacy Settings</button>
+      </li>
+      <li>
+        <h4>Firefox Health Report</h4>
+        <p>FHR shares data with Mozilla about your browser health and helps you understand your browser performance.</p>
+        <ul class="pref-value-list square" pref="fhr">
+          <li>Enabled: ...</li>
+          <li>Disabled: ...</li>
+        </ul>
+        <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
+      </li>
+      <li>
+        <h4>Telemetry</h4>
+        <p>Telemetry shares more detailed performance, usage, hardware and customization data about your browser with Mozilla to help us make the browser better.</p>
+        <ul class="pref-value-list square" pref="telemetry">
+          <li>Enabled: ...</li>
+          <li>Disabled: ...</li>
+        </ul>
+        <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
+      </li>
+      <li>
+        <h4>Crash Reporter</h4>
+        <p>The crash reporter lets you choose to submit crash reports to Mozilla to help us make the browser more stable and secure.</p>
+        <ul class="pref-value-list square" pref="crash">
+          <li>Enabled: ...</li>
+          <li>Disabled: ...</li>
+        </ul>
+        <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
+      </li>
+      <li>
+        <h4>MozStumbler</h4>
+        <p>The MozStumbler shares approximate Wi-Fi and cellular location with Mozilla to help improve our geolocation service.</p>
+        <ul class="pref-value-list square" pref="stumbler">
+          <li>Enabled: ...</li>
+          <li>Disabled: ...</li>
+        </ul>
+        <button class="settings-button" page="preferences_vendor">Mozilla Settings</button>
+      </li>
+    </ul>
 
   </div>
   <div class="one-third column">

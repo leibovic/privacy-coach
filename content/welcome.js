@@ -35,105 +35,58 @@ XPCOMUtils.defineLazyGetter(this, "JNI", function() {
   return scope.JNI;
 });
 
-let gPrefs = [
-  {
-    label: "Do Not Track",
-    description: "DNT lets your browser tell websites that you do not want to be tracked.",
+let gPrefs = {
+  dnt: {
     get value() {
       let enableDNT = Services.prefs.getBoolPref("privacy.donottrackheader.enabled");
       if (!enableDNT) {
-        return "Do not tell sites anything about my tracking preferences";
+        return 0;
       }
       let dntState = Services.prefs.getIntPref("privacy.donottrackheader.value");
       if (dntState === 0) {
-        return "Tell sites that I want to be tracked";
+        return 1;
       }
-      return "Tell sites that I do not want to be tracked";
-    },
-    page: "preferences_privacy"
+      return 2;
+    }
   },
-  {
-    label: "Cookies",
-    description: "Cookies let websites store small pieces of data in your browser to rememeber state when you navigate between webpages. However, this means they can also be used to track you.",
+  cookies: {
     get value() {
-      let val = Services.prefs.getIntPref("network.cookie.cookieBehavior");
-      if (val === 0) {
-        return "Enabled";
-      }
-      if (val === 1) {
-        return "Enabled, excluding 3rd party";
-      }
-      return "Disabled";
-    },
-    page: "preferences_privacy"
+      return Services.prefs.getIntPref("network.cookie.cookieBehavior");
+    }
   },
-  {
-    label: "Firefox Health Report",
-    description: "FHR shares data with Mozilla about your browser health and helps you understand your browser performance.",
+  fhr: {
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.healthreport.uploadEnabled");
-      return val ? "Enabled" : "Disabled";
-    },
-    page: "preferences_vendor"
+      return val ? 0 : 1;
+    }
   },
-  {
-    label: "Telemetry",
-    description: "Telemetry shares more detailed performance, usage, hardware and customization data about your browser with Mozilla to help us make the browser better.",
+  telemetry: {
     get value() {
       let val = Services.prefs.getBoolPref("toolkit.telemetry.enabled");
-      return val ? "Enabled" : "Disabled";
-    },
-    page: "preferences_vendor"
+      return val ? 0 : 1;
+    }
   },
-  {
-    label: "Crash reporter",
-    description: "The crash reporter lets you choose to submit crash reports to Mozilla to help us make the browser more stable and secure.",
+  crash: {
     get value() {
       let val = CrashReporter.submitReports;
-      return val ? "Enabled" : "Disabled";
-    },
-    page: "preferences_vendor"
+      return val ? 0 : 1;
+    }
   },
-  {
-    label: "MozStumbler",
-    description: "The MozStumbler shares approximate Wi-Fi and cellular location with Mozilla to help improve our geolocation service.",
+  stumbler: {
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.app.geo.reportdata");
-      return val ? "Enabled" : "Disabled";
-    },
-    page: "preferences_vendor"
+      return val ? 0 : 1;
+    }
   }
-];
+};
 
-function initPrefsList() {
-  let prefsList = document.getElementById("prefs");
-  gPrefs.forEach(function(pref) {
-    let li = document.createElement("li");
-
-    let label = document.createElement("h4");
-    label.textContent = pref.label;
-    li.appendChild(label);
-
-    let desc = document.createElement("p");
-    desc.textContent = pref.description;
-    li.appendChild(desc);
-
-    let valueContainer = document.createElement("div");
-    valueContainer.classList.add("pref-value");
-
-    let value = document.createElement("div");
-    value.textContent = "Current value: " + pref.value;
-    valueContainer.appendChild(value);
-
-    let button = document.createElement("button");
-    button.textContent = "Change";
-    button.addEventListener("click", () => openPrefPage(pref.page), false);
-    valueContainer.appendChild(button);
-
-    li.appendChild(valueContainer);
-
-    prefsList.appendChild(li);
-  });
+function initPrefValues() {
+  let uls = document.querySelectorAll(".pref-value-list");
+  for (let i = 0; i < uls.length; i++) {
+    let list = uls[i];
+    let pref = gPrefs[list.getAttribute("pref")];
+    list.children[pref.value].classList.add("current-value");
+  }
 }
 
 function initSearchMessage() {
@@ -202,7 +155,7 @@ function openPrefPage(page) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  initPrefsList();
+  initPrefValues();
   initSearchMessage();
   initButtons();
 }, false);
