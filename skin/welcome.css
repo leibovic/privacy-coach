@@ -7,11 +7,21 @@ body {
   font-size: 100%;
 }
 
-.current-value {
-  font-weight: bold;
+.pref-value-container {
+  margin-top: 5px;
+  display: flex;
 }
 
-.settings-button {
+.pref-value-container > .pref-value {
+  font-weight: bold;
+  flex: 1;
+}
+
+.pref-value-container > button {
+  -moz-margin-start: 5px;
+}
+
+.full-width {
   width: 100%;
 }
 

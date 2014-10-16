@@ -40,57 +40,58 @@ let gPrefs = {
     get value() {
       let enableDNT = Services.prefs.getBoolPref("privacy.donottrackheader.enabled");
       if (!enableDNT) {
-        return 2; // "Do not tell site anything"
+        return "Tell sites that I do not want to be tracked"; // "Do not tell site anything"
       }
       let dntState = Services.prefs.getIntPref("privacy.donottrackheader.value");
       if (dntState === 0) {
-        return 1; // Allow tracking
+        return "Tell sites that I want to be tracked"; // Allow tracking
       }
-      return 0; // Do not allow tracking
+      return "Tell sites that I do not want to be tracked"; // Do not allow tracking
     }
   },
   cookies: {
     get value() {
-      return Services.prefs.getIntPref("network.cookie.cookieBehavior");
+      let val = Services.prefs.getIntPref("network.cookie.cookieBehavior");
+      if (val == 0) {
+        return "Enabled";
+      }
+      if (val == 1) {
+        return "Enabled, excluding 3rd party";
+      }
+      return "Disabled";
     }
   },
   fhr: {
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.healthreport.uploadEnabled");
-      return val ? 0 : 1;
+      return val ? "Enabled" : "Disabled";
     }
   },
   telemetry: {
     get value() {
       let val = Services.prefs.getBoolPref("toolkit.telemetry.enabled");
-      return val ? 0 : 1;
+      return val ? "Enabled" : "Disabled";
     }
   },
   crash: {
     get value() {
       let val = CrashReporter.submitReports;
-      return val ? 0 : 1;
+      return val ? "Enabled" : "Disabled";
     }
   },
   stumbler: {
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.app.geo.reportdata");
-      return val ? 0 : 1;
+      return val ? "Enabled" : "Disabled";
     }
   }
 };
 
 function refreshPrefValues() {
-  let uls = document.querySelectorAll(".pref-value-list");
-  Array.prototype.forEach.call(uls, function(list) {
-    let value = gPrefs[list.getAttribute("pref")].value;
-    Array.prototype.forEach.call(list.children, function(child, i) {
-      if (i == value) {
-        child.classList.add("current-value");
-      } else {
-        child.classList.remove("current-value");
-      }
-    });
+  let divs = document.querySelectorAll(".pref-value");
+  Array.prototype.forEach.call(divs, function(div) {
+    let value = gPrefs[div.getAttribute("pref")].value;
+    div.textContent = "Current value: " + value;
   });
 }
 
