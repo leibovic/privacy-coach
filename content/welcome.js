@@ -79,7 +79,7 @@ let gPrefs = {
       return val ? "Enabled" : "Disabled";
     }
   },
-  stumbler: {
+  mls: {
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.app.geo.reportdata");
       return val ? "Enabled" : "Disabled";
