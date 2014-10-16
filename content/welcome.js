@@ -40,13 +40,13 @@ let gPrefs = {
     get value() {
       let enableDNT = Services.prefs.getBoolPref("privacy.donottrackheader.enabled");
       if (!enableDNT) {
-        return "Tell sites that I do not want to be tracked"; // "Do not tell site anything"
+        return "Do not tell sites anything about my tracking preferences";
       }
       let dntState = Services.prefs.getIntPref("privacy.donottrackheader.value");
       if (dntState === 0) {
-        return "Tell sites that I want to be tracked"; // Allow tracking
+        return "Tell sites that I want to be tracked";
       }
-      return "Tell sites that I do not want to be tracked"; // Do not allow tracking
+      return "Tell sites that I do not want to be tracked";
     }
   },
   cookies: {
@@ -101,6 +101,7 @@ function refreshSearchMessage() {
     let engine = Services.search.defaultEngine;
 
     if (engine.getSubmission("").uri.scheme === "https") {
+      searchMessage.classList.remove("warn");
       searchMessage.textContent = "Your default search engine (" + engine.name + ") uses HTTPS, so you're already secure.";
     } else {
       searchMessage.classList.add("warn");
