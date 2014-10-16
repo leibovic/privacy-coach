@@ -22,6 +22,10 @@ XPCOMUtils.defineLazyGetter(this, "CrashReporter", function() {
   }
 });
 
+XPCOMUtils.defineLazyGetter(this, "Strings", function() {
+  return Services.strings.createBundle("chrome://privacycoach/locale/privacycoach.properties");
+});
+
 XPCOMUtils.defineLazyGetter(this, "JNI", function() {
   // Check to see if the public domain JNI.jsm is available in the tree (Firefox 34+).
   let scope = {};
@@ -40,49 +44,53 @@ let gPrefs = {
     get value() {
       let enableDNT = Services.prefs.getBoolPref("privacy.donottrackheader.enabled");
       if (!enableDNT) {
-        return "Do not tell sites anything about my tracking preferences";
+        return Strings.GetStringFromName("prefs.dnt.noPref");
       }
       let dntState = Services.prefs.getIntPref("privacy.donottrackheader.value");
       if (dntState === 0) {
-        return "Tell sites that I want to be tracked";
+        return Strings.GetStringFromName("prefs.dnt.allowTracking");
       }
-      return "Tell sites that I do not want to be tracked";
+      return Strings.GetStringFromName("prefs.dnt.disallowTracking");
     }
   },
   cookies: {
     get value() {
       let val = Services.prefs.getIntPref("network.cookie.cookieBehavior");
       if (val == 0) {
-        return "Enabled";
+        return Strings.GetStringFromName("prefs.enabled");
       }
       if (val == 1) {
-        return "Enabled, excluding 3rd party";
+        return Strings.GetStringFromName("prefs.cookies.firstPartyOnly");
       }
-      return "Disabled";
+      return Strings.GetStringFromName("prefs.disabled");
     }
   },
   fhr: {
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.healthreport.uploadEnabled");
-      return val ? "Enabled" : "Disabled";
+      let stringName = val ? "prefs.enabled" : "prefs.disabled";
+      return Strings.GetStringFromName(stringName);
     }
   },
   telemetry: {
     get value() {
       let val = Services.prefs.getBoolPref("toolkit.telemetry.enabled");
-      return val ? "Enabled" : "Disabled";
+      let stringName = val ? "prefs.enabled" : "prefs.disabled";
+      return Strings.GetStringFromName(stringName);
     }
   },
   crash: {
     get value() {
       let val = CrashReporter.submitReports;
-      return val ? "Enabled" : "Disabled";
+      let stringName = val ? "prefs.enabled" : "prefs.disabled";
+      return Strings.GetStringFromName(stringName);
     }
   },
   mls: {
     get value() {
       let val = SharedPreferences.forApp().getBoolPref("android.not_a_preference.app.geo.reportdata");
-      return val ? "Enabled" : "Disabled";
+      let stringName = val ? "prefs.enabled" : "prefs.disabled";
+      return Strings.GetStringFromName(stringName);
     }
   }
 };
@@ -91,7 +99,7 @@ function refreshPrefValues() {
   let divs = document.querySelectorAll(".pref-value");
   Array.prototype.forEach.call(divs, function(div) {
     let value = gPrefs[div.getAttribute("pref")].value;
-    div.textContent = "Current value: " + value;
+    div.textContent = Strings.formatStringFromName("prefs.currentValue", [value], 1);
   });
 }
 
@@ -102,10 +110,10 @@ function refreshSearchMessage() {
 
     if (engine.getSubmission("").uri.scheme === "https") {
       searchMessage.classList.remove("warn");
-      searchMessage.textContent = "Your default search engine (" + engine.name + ") uses HTTPS, so you're already secure.";
+      searchMessage.textContent = Strings.formatStringFromName("search.https", [engine.name], 1);
     } else {
       searchMessage.classList.add("warn");
-      searchMessage.textContent = "Your default search engine (" + engine.name + ") doesn't use HTTPS, so you may want to change your default now."
+      searchMessage.textContent = Strings.formatStringFromName("search.http", [engine.name], 1);
     }
   });
 }

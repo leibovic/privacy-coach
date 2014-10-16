@@ -20,27 +20,27 @@ let gMenuId;
 
 let gBannerMessages = [
   {
-    text: "Learn the different ways you can clear personal data stored in Firefox.",
+    get text() { return Strings.GetStringFromName("banner.1.text") },
     url: "https://support.mozilla.org/kb/clear-your-browsing-history-and-other-personal-dat"
   },
   {
-    text: "Learn how to create secure, easy-to-remember passwords to keep your identity safe on the internet.",
+    get text() { return Strings.GetStringFromName("banner.2.text") },
     url: "https://support.mozilla.org/kb/create-secure-passwords-keep-your-identity-safe"
   },
   {
-    text: "Learn how Firefox Health Report lets you know how well your browser is performing and what steps you can take to improve it.",
+    get text() { return Strings.GetStringFromName("banner.3.text") },
     url: "https://support.mozilla.org/kb/firefox-health-report-understand-your-android-browser-perf"
   },
   {
-    text: "Learn how Firefox for Android automatically blocks insecure or mixed content from secure web pages.",
+    get text() { return Strings.GetStringFromName("banner.4.text") },
     url: "https://support.mozilla.org/kb/how-does-insecure-content-affect-safety-android"
   },
   {
-    text: "Learn how to create a Guest Session to let someone else use Firefox without giving them access to your personal information.",
+    get text() { return Strings.GetStringFromName("banner.5.text") },
     url: "https://support.mozilla.org/kb/share-your-android-device-firefox-guest-session"
   },
   {
-    text: "Learn how to create private tabs to browse the internet without saving any information about what pages you've visited.",
+    get text() { return Strings.GetStringFromName("banner.6.text") },
     url: "https://support.mozilla.org/kb/mobile-private-browsing-browse-web-without-saving-syncing-info"
   }
 ];
@@ -92,7 +92,7 @@ function confirmSearch(window, name) {
     return true;
   }
 
-  let title = Strings.GetStringFromName("prompt.title");
+  let title = Strings.GetStringFromName("privacyCoach.title");
   let message = Strings.formatStringFromName("httpsWarning.message", [name], 1);
   let dontAsk = Strings.formatStringFromName("httpsWarning.dontAsk", [name], 1);
   let checkState = { value: false };
@@ -120,7 +120,7 @@ function confirmAddSearchEngine(window, url, name) {
     return true;
   }
 
-  let title = Strings.GetStringFromName("prompt.title");
+  let title = Strings.GetStringFromName("privacyCoach.title");
   let message = Strings.formatStringFromName("addEngineWarning.message", [name], 1);
   return Services.prompt.confirm(window, title, message);
 }
@@ -177,7 +177,7 @@ function loadIntoWindow(window) {
 
   // Add menu item to get back to welcome page.
   gMenuId = window.NativeWindow.menu.add({
-    name: "Privacy Coach",
+    name: Strings.GetStringFromName("privacyCoach.title"),
     parent: window.NativeWindow.menu.toolsMenuID,
     callback: () => window.BrowserApp.addTab("chrome://privacycoach/content/welcome.xhtml")
   });
