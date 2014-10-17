@@ -201,6 +201,14 @@ let PrefObserver = {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
+  // Mozilla Location Services is shipping in Fx35.
+  let v = Services.appinfo.version;
+  let version = parseInt(v.substring(0, v.indexOf(".")));
+  if (v < 35) {
+    let mlsPref = document.getElementById("mls-pref");
+    mlsPref.parentNode.removeChild(mlsPref);
+  }
+
   refreshPrefValues();
   refreshSearchMessage();
   initButtons();
