@@ -199,10 +199,11 @@ let windowListener = {
   onOpenWindow: function(window) {
     // Wait for the window to finish loading
     let domWindow = window.QueryInterface(Ci.nsIInterfaceRequestor).getInterface(Ci.nsIDOMWindowInternal || Ci.nsIDOMWindow);
-    domWindow.addEventListener("load", function() {
-      domWindow.removeEventListener("load", arguments.callee, false);
+    function loadListener() {
+      domWindow.removeEventListener("load", loadListener, false);
       loadIntoWindow(domWindow);
-    }, false);
+    };
+    domWindow.addEventListener("load", loadListener, false);
   },
   
   onCloseWindow: function(window) {
