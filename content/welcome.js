@@ -120,11 +120,10 @@ function refreshSearchMessage() {
 
 function initButtons() {
   let buttons = document.querySelectorAll(".settings-button");
-  for (let i = 0; i < buttons.length; i++) {
-    let button = buttons[i];
+  Array.prototype.forEach.call(buttons, function(button) {
     let page = button.getAttribute("page");
     button.addEventListener("click", () => openPrefPage(page), false);
-  }
+  });
 }
 
 function initHeaders() {
