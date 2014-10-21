@@ -28,3 +28,19 @@ body {
 .warn {
   font-weight: bold;
 }
+
+.pref-header > .arrow {
+  height: 11px;
+  width: 11px;
+  margin-left: 6px;
+  transition: transform 500ms;
+  transform: rotate(90deg);
+}
+
+.pref-header[collapsed] > .arrow {
+  transform: none;
+}
+
+.pref-header[collapsed] + div {
+  display: none;
+}

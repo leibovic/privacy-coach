@@ -146,13 +146,9 @@
 		max-width: 100%;
 		height: auto;
 	}
-	
-	img {
-		float:right;
-		
-	}
-		
+
 	.circle {
+		float:right;
 	line-height: 0;		/* remove line-height */ 
 	display: inline-block;	/* circle wraps image */
 	margin: 5px;

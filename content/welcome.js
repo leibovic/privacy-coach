@@ -127,6 +127,19 @@ function initButtons() {
   }
 }
 
+function initHeaders() {
+  let headers = document.querySelectorAll(".pref-header");
+  Array.prototype.forEach.call(headers, function(header) {
+    header.addEventListener("click", function() {
+      if (header.hasAttribute("collapsed")) {
+        header.removeAttribute("collapsed");
+      } else {
+        header.setAttribute("collapsed", true);
+      }
+    }, false);
+  });
+}
+
 /**
  * Uses JNI to open settings.
  */
@@ -211,7 +224,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   refreshPrefValues();
   refreshSearchMessage();
+
   initButtons();
+  initHeaders();
 
   PrefObserver.init();
 }, false);
