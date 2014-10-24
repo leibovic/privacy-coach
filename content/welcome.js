@@ -107,14 +107,8 @@ function refreshSearchMessage() {
   Services.search.init(() => {
     let searchMessage = document.getElementById("search-audit");
     let engine = Services.search.defaultEngine;
-
-    if (engine.getSubmission("").uri.scheme === "https") {
-      searchMessage.classList.remove("warn");
-      searchMessage.textContent = Strings.formatStringFromName("search.https", [engine.name], 1);
-    } else {
-      searchMessage.classList.add("warn");
-      searchMessage.textContent = Strings.formatStringFromName("search.http", [engine.name], 1);
-    }
+    let entity = engine.getSubmission("").uri.scheme === "https" ? "search.https" : "search.http";
+    searchMessage.textContent = Strings.formatStringFromName(entity, [engine.name], 1);
   });
 }
 

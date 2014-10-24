@@ -25,10 +25,6 @@ body {
   width: 100%;
 }
 
-.warn {
-  font-weight: bold;
-}
-
 .pref-header > .arrow {
   height: 11px;
   width: 11px;
@@ -43,4 +39,8 @@ body {
 
 .pref-header[collapsed] + div {
   display: none;
+}
+
+#search-audit {
+  font-weight: bold;
 }
