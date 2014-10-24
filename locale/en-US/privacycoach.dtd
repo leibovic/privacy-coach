@@ -1,57 +1,66 @@
 <!ENTITY welcome.firefoxPrivacyCoach    "Firefox Privacy Coach">
 <!ENTITY welcome.byMozilla              "by Mozilla">
 
-<!ENTITY welcome.intro                  "Welcome to the Firefox Privacy Coach! This add-on will teach you about the privacy features that Firefox has to offer. You can revisit this page any time you like by going to the Tools menu in your browser.">
+<!ENTITY welcome.intro                  "Welcome to Privacy Coach, your one-stop shop to learn about and manage your Firefox for Android privacy settings. You can revisit this page at any time by opening the Tools menu in your browser.">
 
 <!ENTITY prefs.title                    "Privacy Preferences">
-<!ENTITY prefs.intro                    "Firefox allows you to customize preferences that affect your privacy. We've broken down this list of preferences to explain what they actually mean and help you figure out what setting is right for you.">
+<!ENTITY prefs.intro                    "Firefox allows you to customize various settings in an effort to make your browsing experience as private and secure as possible. We’ve broken down this list of preferences to explain what they do and to help you figure out which settings are right for you.">
 
 <!ENTITY prefs.dnt.name                 "Do Not Track">
-<!ENTITY prefs.dnt.desc                 "Most major websites track their visitors' behavior and then sell or provide that information to other companies (like advertisers). Firefox has a Do Not Track feature that lets you tell websites you don't want your browsing behavior tracked.">
+<!ENTITY prefs.dnt.desc                 "This Firefox innovation helps you stay in control of how your browsing information is collected and used online. When the feature is enabled, Firefox will tell advertising networks, websites and applications that you want to opt out of tracking for purposes like behavioral advertising.">
+<!ENTITY prefs.dnt.learnMore            "Learn more about Do Not Track">
+
 <!ENTITY prefs.cookies.name             "Cookies">
-<!ENTITY prefs.cookies.desc             "A cookie is information stored on your computer by a website you visit. Third-party cookies are cookies that are set by a website other than the one you are currently on. Some advertisers use these types of cookies to track your visits to the various websites on where their ads appear.">
+<!ENTITY prefs.cookies.desc             "A cookie is information stored on your computer about the websites you visit. Third-party cookies are those set by a website other than the one you are currently on. Some advertisers use these types of cookies to track your visits to the websites on which they advertise. Firefox has settings that allow you to approve or deny cookie storage requests, delete cookies automatically and more.">
+<!ENTITY prefs.cookies.learnMore        "Learn more about Cookies">
 
 <!ENTITY prefs.fhr.name                 "Firefox Health Report">
-<!ENTITY prefs.fhr.desc                 "The Firefox Health Report provides you with information about your browser’s performance and stability over time. Mozilla uses this data to provide you with meaningful comparisons and tips. We also aggregate the data shared by everyone to make Firefox better for you.">
+<!ENTITY prefs.fhr.pre                  "Firefox Health Report provides you with information about your browser’s performance and stability over time. It then gives you useful tips based on that data to help you get the most out of your browsing experience. For more information about how we handle your data, see our ">
+<!ENTITY prefs.fhr.link                 "privacy policy">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "Learn more about Firefox Health Report">
 
 <!ENTITY prefs.telemetry.name           "Telemetry">
-<!ENTITY prefs.telemetry.desc           "Telemetry shares more detailed performance, usage, hardware and customization data about your browser with Mozilla to help us make the browser better.">
+<!ENTITY prefs.telemetry.desc           "Telemetry measures and collects non-personal information about the performance of your Firefox browser — such as memory consumption, browser speed and feature usage — and sends it to Mozilla. That information is then used to help us make Firefox better for you.">
+<!ENTITY prefs.telemetry.learnMore      "Learn more about Telemetry">
 
 <!ENTITY prefs.crash.name               "Crash Reporter">
-<!ENTITY prefs.crash.desc               "The crash reporter lets you choose to submit crash reports to Mozilla to help us make the browser more stable and secure. This can help the engineers at Mozilla make your browser, but it may include some personal data, such as URLs you've visited.">
+<!ENTITY prefs.crash.desc               "The Crash Reporter gives you the opportunity to submit crash reports to Mozilla in an effort to help us make Firefox more stable and secure. A crash report may include some personal data, such as the URLs you've visited.">
+<!ENTITY prefs.crash.learnMore          "Learn more about Crash Reporter">
 
 <!ENTITY prefs.mls.name                 "Mozilla Location Services">
 <!ENTITY prefs.mls.desc                 "Mozilla Location Services shares approximate Wi-Fi and cellular location with Mozilla to help improve our geolocation service.">
 
-<!ENTITY features.title                 "Other Privacy Features">
-<!ENTITY features.intro                 "In addition to customizable privacy preferences, Firefox also includes other features that you can use to keep your data private.">
+<!ENTITY features.title                 "Privacy Features">
+<!ENTITY features.intro                 "In addition to the customizable privacy preferences above, Firefox also includes several privacy features that you can use everyday to help keep your personal browsing data private.">
 
 <!ENTITY features.pb.title              "Private Browsing">
-<!ENTITY features.pb.desc               "You can create private tabs to browse the internet without saving any information about what pages you've visited.">
+<!ENTITY features.pb.desc               "When Private Browsing tabs are opened, Firefox for Android won’t accept cookies, remember passwords or record a history of any sites that you’ve visited. You can open a Private Browsing session by tapping on your browser menu icons and selecting &quot;New Private Tab&quot;.">
+<!ENTITY features.pb.learnMore          "Learn more about Private Browsing">
 
 <!ENTITY features.gb.title              "Guest Browsing">
-<!ENTITY features.gb.desc               "A Guest Session lets someone else use Firefox on your Android device without giving them access to your personal info like passwords, bookmarks and history.">
+<!ENTITY features.gb.desc               "A Guest Browsing session lets someone else use Firefox on your Android device without seeing your personal info like passwords, bookmarks and history.">
+<!ENTITY features.gb.learnMore          "Learn more about Guest Browsing">
 
-<!ENTITY features.ch.title              "Clear History and Other Data">
-<!ENTITY features.ch.desc               "Firefox offers you control over your personal data, such as browsing history, passwords and more. You can conveniently save this data to your browser and delete it any time you want to.">
-
-<!ENTITY features.ch.clearOnQuit        "In your privacy settings, you can also choose to clear private data every time you select &quot;Quit&quot; from the main menu.">
+<!ENTITY features.ch.title              "Clear History and other data">
+<!ENTITY features.ch.desc               "Easily delete your personal data, such as browsing history, passwords and more any time you like. In your privacy settings, you can also choose to clear private data every time you select &quot;Quit&quot; from the main menu.">
+<!ENTITY features.ch.learnMore          "Learn how to clear your history">
 
 <!ENTITY httpsSearch.title              "HTTPS Search">
-<!ENTITY httpsSearch.intro              "To keep your searches private, you should make sure to use search engines that support HTTPS. We'll prompt you before you make a search that goes over HTTP, and we'll also warn you if you try to make an HTTP search engine your default. You can change your default search engine at any time in the search settings page.">
+<!ENTITY httpsSearch.intro              "To keep your online searches private, we recommend only using search engines that support HTTPS, a secure communications protocol. To help keep you informed, Firefox will prompt you before you make a search that goes over an unsecured HTTP network. Firefox will also give you a warning if you try to make an HTTP search engine your default. You can change your default search engine at any time in the search settings page.">
 
 <!ENTITY addons.title                   "Additional Add-ons">
-<!ENTITY addons.description             "Even though Privacy Coach takes care of a lot of privacy-related preferences, here are a few more Add-ons that can make your browsing experence even more awesome:">
+<!ENTITY addons.description             "We hope you’ve found the Firefox Privacy Coach helpful and have a better understanding of your browser's many privacy features and settings. If you would like even more control of your personal browsing data, check out some of the add-ons listed below.">
 
 <!ENTITY addons.ghostery.title          "Ghostery">
-<!ENTITY addons.ghostery.description    "Protect your privacy. See who's tracking your web browsing and block them.">
+<!ENTITY addons.ghostery.description    "Protects your privacy by letting you see who's tracking your Web browsing and block them.">
 <!ENTITY addons.https.title             "HTTPS Everywhere">
 <!ENTITY addons.https.description       "Encrypts your communications with many major websites, making your browsing more secure.">
 <!ENTITY addons.sdc.title               "Self Destructing Cookies">
-<!ENTITY addons.sdc.description         "Gets rid of a site's cookies and LocalStorage as soon as you close its tabs. Protects against trackers and zombie-cookies. Trustworthy services can be whitelisted.">
-<!ENTITY addons.more.pre                "For even more add-ons, you can explore the full set of ">
-<!ENTITY addons.more.link               "Security &amp; Privacy add-ons">
-<!ENTITY addons.more.post               ".">
+<!ENTITY addons.sdc.description         "Gets rid of a site's cookies and LocalStorage as soon as you close any open tabs for that page. It also protects against trackers and zombie-cookies and lets you whitelist services you know are trustworthy.">
+<!ENTITY addons.more.pre                "For even more, you can explore our full set of ">
+<!ENTITY addons.more.link               "Security &amp; Privacy add-ons »">
+<!ENTITY addons.more.post               "">
 
 <!ENTITY settingsButton.privacy         "Privacy Settings">
 <!ENTITY settingsButton.mozilla         "Mozilla Settings">
