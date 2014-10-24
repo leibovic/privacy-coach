@@ -1,7 +1,7 @@
 <!ENTITY welcome.firefoxPrivacyCoach    "Firefox Privacy Coach">
 <!ENTITY welcome.byMozilla              "by Mozilla">
 
-<!ENTITY welcome.intro                  "Welcome to the Firefox Privacy Coach! This add-on will teach you about the privacy features that Firefox has to offer.">
+<!ENTITY welcome.intro                  "Welcome to the Firefox Privacy Coach! This add-on will teach you about the privacy features that Firefox has to offer. You can revisit this page any time you like by going to the Tools menu in your browser.">
 
 <!ENTITY prefs.title                    "Privacy Preferences">
 <!ENTITY prefs.intro                    "Firefox allows you to customize preferences that affect your privacy. We've broken down this list of preferences to explain what they actually mean and help you figure out what setting is right for you.">
@@ -9,38 +9,36 @@
 <!ENTITY prefs.dnt.name                 "Do Not Track">
 <!ENTITY prefs.dnt.desc                 "Most major websites track their visitors' behavior and then sell or provide that information to other companies (like advertisers). Firefox has a Do Not Track feature that lets you tell websites you don't want your browsing behavior tracked.">
 <!ENTITY prefs.cookies.name             "Cookies">
-<!ENTITY prefs.cookies.desc             "A cookie is information stored on your computer by a website you visit. Third-party cookies are cookies that are set by a website other than the one you are currently on. Some advertisers use these types of cookies to track your visits to the various websites on which they advertise.">
+<!ENTITY prefs.cookies.desc             "A cookie is information stored on your computer by a website you visit. Third-party cookies are cookies that are set by a website other than the one you are currently on. Some advertisers use these types of cookies to track your visits to the various websites on where their ads appear.">
+
 <!ENTITY prefs.fhr.name                 "Firefox Health Report">
 <!ENTITY prefs.fhr.desc                 "The Firefox Health Report provides you with information about your browser’s performance and stability over time. Mozilla uses this data to provide you with meaningful comparisons and tips. We also aggregate the data shared by everyone to make Firefox better for you.">
+
 <!ENTITY prefs.telemetry.name           "Telemetry">
 <!ENTITY prefs.telemetry.desc           "Telemetry shares more detailed performance, usage, hardware and customization data about your browser with Mozilla to help us make the browser better.">
+
 <!ENTITY prefs.crash.name               "Crash Reporter">
 <!ENTITY prefs.crash.desc               "The crash reporter lets you choose to submit crash reports to Mozilla to help us make the browser more stable and secure. This can help the engineers at Mozilla make your browser, but it may include some personal data, such as URLs you've visited.">
+
 <!ENTITY prefs.mls.name                 "Mozilla Location Services">
 <!ENTITY prefs.mls.desc                 "Mozilla Location Services shares approximate Wi-Fi and cellular location with Mozilla to help improve our geolocation service.">
 
 <!ENTITY features.title                 "Other Privacy Features">
-<!ENTITY features.intro                 "In addition to cutomizable privacy preferences, Firefox also includes features that you can use to keep your data private.">
-
-<!ENTITY features.learnMore             "Learn More">
+<!ENTITY features.intro                 "In addition to customizable privacy preferences, Firefox also includes other features that you can use to keep your data private.">
 
 <!ENTITY features.pb.title              "Private Browsing">
-<!ENTITY features.pb.desc.pre           "You can create private tabs to browse the internet without saving any information about what pages you've visited. ">
-<!ENTITY features.pb.desc.post          "">
+<!ENTITY features.pb.desc               "You can create private tabs to browse the internet without saving any information about what pages you've visited.">
 
 <!ENTITY features.gb.title              "Guest Browsing">
-<!ENTITY features.gb.desc.pre           "A Guest Session lets someone else use Firefox on your Android device without giving them access to your personal info like passwords, bookmarks and history. ">
-<!ENTITY features.gb.desc.post          "">
+<!ENTITY features.gb.desc               "A Guest Session lets someone else use Firefox on your Android device without giving them access to your personal info like passwords, bookmarks and history.">
 
 <!ENTITY features.ch.title              "Clear History and Other Data">
-<!ENTITY features.ch.desc.pre           "Firefox offers you control over your personal data, such as browsing history, passwords and more. You can conveniently save this data to your browser and delete it any time you want to. ">
-<!ENTITY features.ch.desc.post          "">
+<!ENTITY features.ch.desc               "Firefox offers you control over your personal data, such as browsing history, passwords and more. You can conveniently save this data to your browser and delete it any time you want to.">
 
 <!ENTITY features.ch.clearOnQuit        "In your privacy settings, you can also choose to clear private data every time you select &quot;Quit&quot; from the main menu.">
 
 <!ENTITY httpsSearch.title              "HTTPS Search">
 <!ENTITY httpsSearch.intro              "To keep your searches private, you should make sure to use search engines that support HTTPS. We'll prompt you before you make a search that goes over HTTP, and we'll also warn you if you try to make an HTTP search engine your default. You can change your default search engine at any time in the search settings page.">
-
 
 <!ENTITY addons.title                   "Additional Add-ons">
 <!ENTITY addons.description             "Even though Privacy Coach takes care of a lot of privacy-related preferences, here are a few more Add-ons that can make your browsing experence even more awesome:">
@@ -58,3 +56,5 @@
 <!ENTITY settingsButton.privacy         "Privacy Settings">
 <!ENTITY settingsButton.mozilla         "Mozilla Settings">
 <!ENTITY settingsButton.search          "Search Settings">
+
+<!ENTITY features.learnMore             "Learn More">
