@@ -1,0 +1,69 @@
+<!ENTITY welcome.firefoxPrivacyCoach    "Firefox-Datenschutzhelfer">
+<!ENTITY welcome.byMozilla              "von Mozilla">
+
+<!ENTITY welcome.intro                  "Willkommen beim Datenschutzhelfer, Ihrer Komplettlösung, bei der Sie alles über die Datenschutzeinstellungen Ihres Firefox für Android erfahren und wo Sie diese verwalten können. Sie können diese Seite jederzeit wieder aufrufen, indem Sie das Extras-Menü in Ihrem Browser öffnen.">
+
+<!ENTITY prefs.title                    "Datenschutzeinstellungen">
+<!ENTITY prefs.intro                    "Mit Firefox können Sie verschiedene Einstellungen anpassen, um dadurch Ihr Surf-Erlebnis so privat und sicher wie möglich zu machen. Wir haben diese Einstellungsliste zusammengestellt, um deren Funktion zu erklären und um Ihnen bei der Wahl der für Sie richtigen Einstellungen zu helfen.">
+
+<!ENTITY prefs.dnt.name                 "Aktivitätenverfolgung">
+<!ENTITY prefs.dnt.desc                 "Diese Firefox-Innovation hilft Ihnen dabei, die Kontrolle über die Sammlung und Verwendung Ihrer Surf-Daten im Internet zu behalten. Wenn die Funktion aktiviert ist, teilt Firefox Werbenetzwerken, Websites und Anwendungen mit, dass Sie nicht für Zwecke wie verhaltensbasierte Werbung verfolgt werden möchten.">
+<!ENTITY prefs.dnt.learnMore            "Erfahren Sie mehr über Aktivitätenverfolgung">
+
+<!ENTITY prefs.cookies.name             "Cookies">
+<!ENTITY prefs.cookies.desc             "Ein Cookie ist eine auf Ihrem Rechner gespeicherte Information über die von Ihnen besuchten Websites. Dritt-Cookies stammen von einer Website, die nicht der entspricht, auf der Sie sich gerade befinden. Manche Werbetreibende verwenden diese Arten von Cookies, um Ihre Besuche auf den Websites zu verfolgen, auf denen sie Werbung schalten. Firefox verfügt über Einstellungen, mit denen Sie Anfragen zum Speichern von Cookies annehmen oder ablehnen, Cookies automatisch löschen und mehr tun können.">
+<!ENTITY prefs.cookies.learnMore        "Erfahren Sie mehr über Cookies">
+
+<!ENTITY prefs.fhr.name                 "Firefox-Statusbericht">
+<!ENTITY prefs.fhr.pre                  "Der Firefox-Statusbericht liefert Ihnen Informationen über die Leistung und Stabilität Ihres Browsers im Laufe der Zeit. Dann gibt er Ihnen basierend auf diesen Daten nützliche Tipps, um Ihnen zu helfen, das Beste aus Ihrem Surf-Erlebnis herauszuholen. Weitere Informationen zu unserem Umgang mit Ihren Daten finden Sie in unserer ">
+<!ENTITY prefs.fhr.link                 "Datenschutzerklärung">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "Erfahren Sie mehr über den Firefox-Statusbericht">
+
+<!ENTITY prefs.telemetry.name           "Telemetrie">
+<!ENTITY prefs.telemetry.desc           "Telemetrie misst und sammelt keine auf Sie bezogenen Daten, sondern solche über die Leistung Ihres Firefox-Browsers – wie Speicherverbrauch, Browser-Geschwindigkeit und Nutzung der Funktionen – und sendet sie an Mozilla. Diese Daten werden dann von uns verwendet, um Firefox für Sie noch besser zu machen.">
+<!ENTITY prefs.telemetry.learnMore      "Erfahren Sie mehr über Telemetrie">
+
+<!ENTITY prefs.crash.name               "Absturzmelder">
+<!ENTITY prefs.crash.desc               "Mit dem Absturzmelder können Sie Absturzmeldungen an Mozilla schicken, mit denen wir versuchen, Firefox noch stabiler und sicherer zu machen. In einem Absturzbericht können einige persönliche Daten stehen, wie die Adressen der Webseiten, die Sie besucht haben.">
+<!ENTITY prefs.crash.learnMore          "Erfahren Sie mehr über den Absturzmelder">
+
+<!ENTITY prefs.mls.name                 "Mozilla-Standortdienste">
+<!ENTITY prefs.mls.desc                 "Mozilla-Standortdienste geben ungefähre WLAN- und Mobilfunkstandorte an Mozilla weiter, um unseren Standortdienst zu verbessern.">
+
+<!ENTITY features.title                 "Datenschutzfunktionen">
+<!ENTITY features.intro                 "Zusätzlich zu den oben genannten anpassbaren Datenschutzeinstellungen verfügt Firefox auch über mehrere Datenschutzfunktionen, die Sie täglich verwenden können, um Ihre persönlichen Surf-Daten unter Verschluss zu halten.">
+
+<!ENTITY features.pb.title              "Privater Modus">
+<!ENTITY features.pb.desc               "Wenn Tabs im privaten Modus geöffnet sind, akzeptiert Firefox für Android keine Cookies, speichert keine Passwörter und zeichnet keine Chronik der von Ihnen besuchten Websites auf. Sie können eine Sitzung im privaten Modus öffnen, indem Sie auf die Menüsymbole Ihres Browsers tippen und „Neuer privater Tab“ wählen.">
+<!ENTITY features.pb.learnMore          "Erfahren Sie mehr über den privaten Modus">
+
+<!ENTITY features.gb.title              "Gastmodus">
+<!ENTITY features.gb.desc               "Bei einer Sitzung im Gastmodus kann jemand anderes Firefox auf Ihrem Android-Gerät verwenden, ohne Ihre persönlichen Daten, wie Passwörter, Lesezeichen und Chronik, zu sehen.">
+<!ENTITY features.gb.learnMore          "Erfahren Sie mehr über den Gastmodus">
+
+<!ENTITY features.ch.title              "Chronik und andere Daten löschen">
+<!ENTITY features.ch.desc               "Löschen Sie einfach Ihre persönlichen Daten, wie Surf-Chronik, Passwörter und mehr, wann immer Sie möchten. In Ihren Datenschutzeinstellungen können Sie auch auswählen, ob private Daten immer gelöscht werden sollen, wenn Sie „Beenden“ aus dem Hauptmenü wählen.">
+<!ENTITY features.ch.learnMore          "Erfahren Sie, wie Sie Ihre Chronik löschen">
+
+<!ENTITY httpsSearch.title              "HTTPS-Suche">
+<!ENTITY httpsSearch.intro              "Damit Ihre Suchen im Internet privat bleiben, empfehlen wir, nur Suchmaschinen zu verwenden, die das sichere Kommunikationsprotokoll HTTPS unterstützen. Um Ihnen bei der Auswahl zu helfen, fragt Sie Firefox, bevor Sie eine Suche über eine ungesicherte HTTP-Verbindung durchführen. Firefox warnt Sie auch, wenn Sie eine HTTP-Suchmaschine zum Standard machen wollen. Sie können Ihre Standardsuchmaschine jederzeit auf der Seite der Sucheinstellungen ändern.">
+
+<!ENTITY addons.title                   "Zusätzliche Add-ons">
+<!ENTITY addons.description             "Wir hoffen, dass Ihnen der Firefox-Datenschutzhelfer geholfen hat und Sie die vielen Datenschutzfunktionen und -einstellungen Ihres Browsers jetzt besser verstehen. Wenn Sie noch mehr Kontrolle über Ihre persönlichen Surf-Daten möchten, sehen Sie sich einige der folgenden Add-ons an.">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "Schützt Ihre Privatsphäre, indem es Ihnen zeigt, wer Ihr Surf-Verhalten verfolgt, und diese blockiert.">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "Verschlüsselt Ihre Kommunikation mit vielen großen Websites, was Ihr Surfen noch sicherer macht.">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "Beseitigt beim Schließen von Tabs die Cookies und lokal gespeicherte Objekte für diese Website. Es schützt außerdem gegen Tracker und Zombie-Cookies und bietet eine Positivliste für Dienste, denen Sie vertrauen.">
+<!ENTITY addons.more.pre                "Noch mehr finden Sie in unserer vollständigen Liste der ">
+<!ENTITY addons.more.link               "Sicherheits- &amp; Datenschutz-Add-ons »">
+<!ENTITY addons.more.post               ".">
+
+<!ENTITY settingsButton.privacy         "Datenschutzeinstellungen">
+<!ENTITY settingsButton.mozilla         "Mozilla-Einstellungen">
+<!ENTITY settingsButton.search          "Sucheinstellungen">
+
+<!ENTITY features.learnMore             "Weitere Informationen">
