@@ -9,6 +9,13 @@
         <em:bootstrap>true</em:bootstrap>
         <em:description>Add-on that helps you use privacy features in your browser.</em:description>
         <em:creator>Margaret Leibovic</em:creator>
+        <em:localized>
+          <Description>
+            <em:locale>de</em:locale>
+            <em:name>Datenschutzhelfer</em:name>
+            <em:description>Add-on, das Sie bei der Verwendung der Datenschutzfunktionen Ihres Browsers unterstützt.</em:description>
+          </Description>
+        </em:localized>
 
         <!-- Mobile -->
         <em:targetApplication>
