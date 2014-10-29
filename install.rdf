@@ -16,6 +16,13 @@
             <em:description>Add-on, das Sie bei der Verwendung der Datenschutzfunktionen Ihres Browsers unterstützt.</em:description>
           </Description>
         </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>ja</em:locale>
+            <em:name>プライバシーコーチ</em:name>
+            <em:description>ブラウザのプライバシー機能の活用を支援するアドオンです。</em:description>
+          </Description>
+        </em:localized>
 
         <!-- Mobile -->
         <em:targetApplication>
