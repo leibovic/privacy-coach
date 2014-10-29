@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Firefox プライバシーコーチ">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Firefox プライバシーコーチ">
+<!ENTITY welcome.byMozilla              "by Mozilla">
+
+<!ENTITY welcome.intro                  "プライバシーコーチへようこそ。これは Android 版 Firefox のプライバシー設定を理解し管理するための総合ツールです。ブラウザの「ツール」メニューを開けば、いつでもこのページへ戻ってくることができます。">
+
+<!ENTITY prefs.title                    "プライバシー設定">
+<!ENTITY prefs.intro                    "Firefox は、ユーザのブラウジング体験をできる限りプライベートで安全なものにするため、様々な設定をカスタマイズできるようにしています。それら一連の設定を分類し、それぞれの設定で何ができるかを解説しますので、どの設定があなたに合っているか把握するのに役立ててください。">
+
+<!ENTITY prefs.dnt.name                 "Do Not Track">
+<!ENTITY prefs.dnt.desc                 "これは、ブラウジング情報がオンラインでどのように収集、使用されるかをユーザ自身が管理できるよう考案された、Firefox の革新的な機能のひとつです。この機能を有効にすると、行動ターゲティング広告などを目的とした追跡を望まないという意思を、Firefox から、広告ネットワーク、Web サイト、アプリケーションに対して伝えられます。">
+<!ENTITY prefs.dnt.learnMore            "Do Not Track に関する詳しい情報">
+
+<!ENTITY prefs.cookies.name             "Cookie">
+<!ENTITY prefs.cookies.desc             "Cookie とは、お使いのコンピュータ上に保存される、あなたが訪れたサイトに関する情報です。サードパーティ Cookie とは、あなたが訪れたのと異なるサイトによって設定されるものです。一部の広告主はそうした Cookie を使用して、広告を掲載している複数のサイトにわたる訪問を追跡しています。Firefox は、Cookie の保存要求を許可あるいは拒否したり、Cookie を自動的に削除したりできる設定を備えています。">
+<!ENTITY prefs.cookies.learnMore        "Cookie に関する詳しい情報">
+
+<!ENTITY prefs.fhr.name                 "Firefox ヘルスレポート">
+<!ENTITY prefs.fhr.pre                  "Firefox ヘルスレポートは、お使いのブラウザのパフォーマンスと安定性に関する長期的な情報を提供します。また、ブラウジング体験を最大限活用できるよう、そのデータに基づいた役立つヒントも提供します。ユーザから提供されたデータの取り扱いに関しては、Mozilla の ">
+<!ENTITY prefs.fhr.link                 "プライバシーポリシー">
+<!ENTITY prefs.fhr.post                 " で詳しく説明しています。">
+<!ENTITY prefs.fhr.learnMore            "Firefox ヘルスレポートに関する詳しい情報">
+
+<!ENTITY prefs.telemetry.name           "Telemetry">
+<!ENTITY prefs.telemetry.desc           "Telemetry は、メモリ消費量、ブラウザの実行速度、機能の使用状況など、お使いの Firefox ブラウザのパフォーマンスに関して個人情報には該当しないデータを評価、収集し、Mozilla へ送信します。そうした情報は最終的に Firefox の改善に役立てられます。">
+<!ENTITY prefs.telemetry.learnMore      "Telemetry に関する詳しい情報">
+
+<!ENTITY prefs.crash.name               "クラッシュレポーター">
+<!ENTITY prefs.crash.desc               "クラッシュレポーターは、Firefox の安定性や安全性の改善に役立てられるよう、クラッシュレポートを Mozilla へ送信する機会をユーザに提供します。クラッシュレポートには、訪れたサイトの URL など、多少の個人データが含まれる可能性があります。">
+<!ENTITY prefs.crash.learnMore          "クラッシュレポーターに関する詳しい情報">
+
+<!ENTITY prefs.mls.name                 "Mozilla 位置情報サービス">
+<!ENTITY prefs.mls.desc                 "Mozilla 位置情報サービスは、Mozilla が提供する位置情報関連サービスの改善に役立てられるよう、Wi-Fi アクセスポイントや携帯電話基地局のおおよその位置を Mozilla と共有します。">
+
+<!ENTITY features.title                 "プライバシー機能">
+<!ENTITY features.intro                 "Firefox には、カスタマイズ可能な上記のプライバシー設定に加えて、個人的なブラウジングデータを守るため日常的に使用できるいくつかのプライバシー機能が備わっています。">
+
+<!ENTITY features.pb.title              "プライベートブラウジング">
+<!ENTITY features.pb.desc               "プライベートブラウジングタブが開かれると、Android 版 Firefox は、訪れたサイトの Cookie 受け入れ、パスワードの保存、履歴の記録を一切行わなくなります。プライベートブラウジングセッションを開始するには、ブラウザのメニューアイコンをタップし、「新しいプライベートタブ」を選択します。">
+<!ENTITY features.pb.learnMore          "プライベートブラウジングに関する詳しい情報">
+
+<!ENTITY features.gb.title              "ゲストブラウジング">
+<!ENTITY features.gb.desc               "ゲストブラウジングセッションを活用すれば、パスワード、ブックマーク、履歴といった個人情報をさらすことなく、あなたの Android 端末上で他の人に Firefox を使わせることができます。">
+<!ENTITY features.gb.learnMore          "ゲストブラウジングに関する詳しい情報">
+
+<!ENTITY features.ch.title              "履歴やその他のデータを消去">
+<!ENTITY features.ch.desc               "ブラウジング履歴やパスワードといった個人データはいつでも簡単に削除できます。プライバシー設定では、メインメニューから「終了」を選択するたびに個人データを消去するよう設定することも可能です。">
+<!ENTITY features.ch.learnMore          "履歴を消去する方法を学ぶ">
+
+<!ENTITY httpsSearch.title              "HTTPS 検索">
+<!ENTITY httpsSearch.intro              "オンライン検索時のプライバシーを守るため、安全な通信プロトコルである HTTPS に対応している検索エンジンのみ使用することをお勧めします。あなたに随時情報を提供するため、Firefox は安全でない HTTP ネットワークを通じて検索が行われる前に確認画面を表示します。また、あなたが HTTP サイトを既定の検索エンジンに設定しようとした場合にも警告を表示します。既定の検索エンジンは検索設定ページでいつでも変更できます。">
+
+<!ENTITY addons.title                   "追加アドオン">
+<!ENTITY addons.description             "お使いのブラウザに備わっているプライバシー関連の様々な機能や設定をより深く理解していただくのに、この Firefox プライバシーコーチが役立つことを願っています。個人的なブラウジングデータをより詳細に管理したいという人は、以下に挙げるいくつかのアドオンをチェックしてみてください。">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "あなたのブラウジングを誰が追跡しているかを示し、それらをブロックできるようにすることで、プライバシーを守ります。">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "多くの主要サイトとの通信を暗号化し、ブラウジングをより安全にします。">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "サイトの Cookie やローカルストレージを、そのページを開いているタブが閉じられると同時に削除します。また、トラッカーやゾンビ Cookie を禁止し、信頼できるサービスをホワイトリストへ追加できる機能も提供します。">
+<!ENTITY addons.more.pre                "この他にも様々なツールが公開されています。">
+<!ENTITY addons.more.link               "セキュリティとプライバシー関連のアドオン »">
+<!ENTITY addons.more.post               "">
+
+<!ENTITY settingsButton.privacy         "プライバシー設定">
+<!ENTITY settingsButton.mozilla         "Mozilla 設定">
+<!ENTITY settingsButton.search          "検索設定">
+
+<!ENTITY features.learnMore             "詳細">
