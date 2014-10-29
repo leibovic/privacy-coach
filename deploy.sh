@@ -7,7 +7,7 @@ source $(dirname $0)/build
 # Aurora = org.mozilla.fennec_aurora
 # Beta = org.mozilla.firefox_beta
 # Release = org.mozilla.firefox
-ANDROID_APP_ID=org.mozilla.firefox
+ANDROID_APP_ID=org.mozilla.fennec
 
 # Push the add-on to your device to test.
 adb push "$XPI" /sdcard/"$XPI" && \
