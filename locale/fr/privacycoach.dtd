@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Votre Coach de vie privée pour Firefox">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Votre Coach de vie privée pour Firefox">
+<!ENTITY welcome.byMozilla              "par Mozilla">
+
+<!ENTITY welcome.intro                  "Bienvenue dans Votre Coach de vie privée, l'endroit pour apprendre et contrôler les préférences de vie privée de votre Firefox pour Android. Vous pourrez revisiter cette page à n'importe quel moment en ouvrant le menu Outils de votre navigateur.">
+
+<!ENTITY prefs.title                    "Préférences de vie privée">
+<!ENTITY prefs.intro                    "Firefox vous permet de personnaliser un certain nombre de paramètres afin de rendre votre navigation la plus privée et sécurisée possible. Nous avons établi la liste détaillée de tous les paramètres pour vous expliquer ce que chacun fait et vous aider à les configurer selon vos besoins.">
+
+<!ENTITY prefs.dnt.name                 "Ne pas me pister">
+<!ENTITY prefs.dnt.desc                 "Cette fonctionnalité innovante de Firefox vous permet de garder le contrôle sur la manière dont vos informations de navigation sont collectées et utilisées en ligne. Lorsque l'option est activée, Firefox indique aux annonceurs, aux sites web et aux applications que vous ne souhaitez pas être pisté à des fins de publicité ciblée notamment.">
+<!ENTITY prefs.dnt.learnMore            "En savoir plus sur la fonction Ne pas me pister">
+
+<!ENTITY prefs.cookies.name             "Cookies">
+<!ENTITY prefs.cookies.desc             "Un cookie est un fichier enregistré sur votre ordinateur associé aux sites web que vous avez visité. Les cookies tiers sont ceux laissés par un site web différent de celui que vous êtes en train de visiter. Certains annonceurs utilisent ce type de cookies pour suivre votre navigation sur les sites web sur lesquels ils affichent leurs publicités. Firefox propose des paramètres vous permettant d'autoriser ou de refuser les demandes d'enregistrement de cookies, de supprimer automatiquement les cookies et bien plus encore.">
+<!ENTITY prefs.cookies.learnMore        "En savoir plus sur les cookies">
+
+<!ENTITY prefs.fhr.name                 "Bilan de santé de Firefox">
+<!ENTITY prefs.fhr.pre                  "Le bilan de santé de Firefox vous fournit des informations sur les performances de votre navigateur et sa stabilité au cours du temps. Il vous donne de précieux conseils pour vous permettre d'optimiser votre navigation. Pour plus d'informations sur la manière dont nous collectons vos données, consultez notre ">
+<!ENTITY prefs.fhr.link                 "politique de confidentialité">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "En savoir plus sur le bilan de santé de Firefox">
+
+<!ENTITY prefs.telemetry.name           "Télémétrie">
+<!ENTITY prefs.telemetry.desc           "La télémétrie mesure et recueille des informations non personnelles sur les performances de votre navigateur Firefox, telles que la consommation mémoire, la rapidité du navigateur, l'utilisation de fonctionnalités, et les envoie à Mozilla. Ces informations sont par la suite utilisées pour nous aider à améliorer Firefox pour vous.">
+<!ENTITY prefs.telemetry.learnMore      "En savoir plus sur la télémétrie">
+
+<!ENTITY prefs.crash.name               "Rapports de plantage">
+<!ENTITY prefs.crash.desc               "Le rapporteur de plantages vous donne la possibilité d'envoyer des rapports de plantage à Mozilla dans le but de nous aider à rendre Firefox plus stable et sécurisé. Un rapport de plantage peut inclure certaines données personnelles comme les adresses que vous avez visitées.">
+<!ENTITY prefs.crash.learnMore          "En savoir plus sur les rapports de plantage">
+
+<!ENTITY prefs.mls.name                 "Services de localisation de Mozilla">
+<!ENTITY prefs.mls.desc                 "Le service de localisation de Mozilla partage la position des antennes Wi-Fi et téléphoniques avec Mozilla pour améliorer notre service de géolocalisation.">
+
+<!ENTITY features.title                 "Fonctionnalités de confidentialité">
+<!ENTITY features.intro                 "En plus des préférences de confidentialité présentées ci-dessus, Firefox inclut également plusieurs fonctionnalités de confidentialité que vous pouvez utiliser quotidiennement pour vous aider à garder vos données de navigation personnelles privées.">
+
+<!ENTITY features.pb.title              "Navigation privée">
+<!ENTITY features.pb.desc               "Lorsque des onglets de navigation privée sont ouverts, Firefox pour Android n'acceptera aucun cookie, ne retiendra aucun mot de passe et n'enregistrera pas l'historique des sites que vous avez visités. Vous pouvez démarrer une session de navigation privée en ouvrant le menu de votre navigateur et en sélectionnant &laquo; Nouvel onglet nav. privée &raquo;.">
+<!ENTITY features.pb.learnMore          "En savoir plus sur la navigation privée">
+
+<!ENTITY features.gb.title              "Navigation invité">
+<!ENTITY features.gb.desc               "Une session de navigation invité permet à n'importe qui d'utiliser Firefox sur votre appareil Android  sans pouvoir accéder à vos informations personnelles telles que vos mots de passe, vos marque-pages et votre historique.">
+<!ENTITY features.gb.learnMore          "En savoir plus sur la navigation invité">
+
+<!ENTITY features.ch.title              "Effacer l'historique et d'autres données">
+<!ENTITY features.ch.desc               "Supprimez facilement vos données personnelles comme l'historique de navigation, les mots de passe enregistrés dès que vous le souhaitez. Dans vos paramètres de confidentialité, vous pouvez aussi choisir d'effacer vos données personnelles à chaque fois que vous sélectionnez &laquo; Quitter &raquo; du menu principal">
+<!ENTITY features.ch.learnMore          "Découvrir comment effacer votre historique">
+
+<!ENTITY httpsSearch.title              "Recherche HTTPS">
+<!ENTITY httpsSearch.intro              "Pour garder vos recherches en ligne privées, nous vous recommandons d'utiliser seulement les moteurs de recherche prenant en charge le protocole HTTPS, un protocole de communication sécurisé. Pour vous tenir au courant, Firefox vous avertira avant de faire une recherche qui passe par un réseau HTTP non sécurisé. Firefox vous avertira aussi si vous tentez de définir par défaut un moteur de recherche utilisant HTTP. Vous pouvez changer votre moteur de recherche par défaut à tout moment depuis la page des paramètres de recherche.">
+
+<!ENTITY addons.title                   "D'autres modules complémentaires">
+<!ENTITY addons.description             "Nous espérons que le Coach de vie privée vous a aidé et que vous comprenez mieux les nombreux paramètres et fonctionnalités relatifs à la confidentialité. Si vous souhaitez maîtriser encore mieux vos données de navigation, consultez la liste des modules complémentaires ci-dessous.">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "Protège votre vie privée en vous permettant de savoir qui vous piste et de mettre en place des blocages.">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "Chiffre vos communications pour la plupart des sites web afin de rendre votre navigation plus sécurisée.">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "Se débarrasse des cookies et des données locales des sites dès que vous fermez l'un des onglets liés à cette page. Il vous protège également du pistage et des cookies zombies, et vous permet de mettre sur liste blanche les services auxquels vous faites confiance.">
+<!ENTITY addons.more.pre                "Pour en savoir plus, vous pouvez parcourir notre sélection complète de ">
+<!ENTITY addons.more.link               "modules complémentaires pour la sécurité et la confidentialité&nbsp;»">
+<!ENTITY addons.more.post               "">
+
+<!ENTITY settingsButton.privacy         "Paramètres de vie privée">
+<!ENTITY settingsButton.mozilla         "Paramètres de Mozilla">
+<!ENTITY settingsButton.search          "Paramètres de recherche">
+
+<!ENTITY features.learnMore             "En savoir plus">
