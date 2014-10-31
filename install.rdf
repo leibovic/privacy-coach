@@ -23,6 +23,13 @@
             <em:description>ブラウザのプライバシー機能の活用を支援するアドオンです。</em:description>
           </Description>
         </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>zh-TW</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>幫助您在瀏覽器中使用隱私功能的附加元件。</em:description>
+          </Description>
+        </em:localized>
 
         <!-- Mobile -->
         <em:targetApplication>
