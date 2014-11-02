@@ -3,5 +3,6 @@ locale        privacycoach  de            locale/de/
 locale        privacycoach  en-US         locale/en-US/
 locale        privacycoach  fr            locale/fr/
 locale        privacycoach  ja            locale/ja/
+locale        privacycoach  pt-BR         locale/pt-BR/
 locale        privacycoach  zh-TW         locale/zh-TW/
 skin          privacycoach  classic       skin/
