@@ -39,6 +39,13 @@
         </em:localized>
         <em:localized>
           <Description>
+            <em:locale>ru</em:locale>
+            <em:name>Тренер по приватности</em:name>
+            <em:description>Дополнение, помогающее вам использовать в браузере функции приватности.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
             <em:locale>zh-TW</em:locale>
             <em:name>Privacy Coach</em:name>
             <em:description>幫助您在瀏覽器中使用隱私功能的附加元件。</em:description>
