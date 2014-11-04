@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Firefox Privacy Coach">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Firefox Privacy Coach">
+<!ENTITY welcome.byMozilla              "nga Mozilla">
+
+<!ENTITY welcome.intro                  "Mirë se vini te Privacy Coach, vendi i duhur për të njohur dhe administruar rregullimet e privatësisë te Firefox-i për Android. Këtë faqe mund ta rivizitoni kur të doni, duke hapur menunë Mjete te shfletuesi juaj.">
+
+<!ENTITY prefs.title                    "Parapëlqime Mbi Privatësinë">
+<!ENTITY prefs.intro                    "Firefox-i ju lejon të përshtatni rregullime të ndryshme, si një përpjekje për ta bërë shfletimin tuaj sa më privat dhe të sigurt që mundet. Kemi krijuar këtë listë parapëlqimesh për të shpjeguar se çfarë bëjnë dhe për t’ju ndihmuar të kuptoni cilat janë ato që ju duhen.">
+
+<!ENTITY prefs.dnt.name                 "Mos Më Gjurmo">
+<!ENTITY prefs.dnt.desc                 "Kjo risi e Firefox-it ju lejon të ruani kontrollin mbi se si grumbullohen dhe përdoren të dhënat e shfletimit tuaj. Kur veçoria është e aktivizuar, Firefox-i do t’u thotë rrjeteve të reklamave, sajteve web dhe zbatimeve se dëshironi të liheni jashtë nga gjurmimet e bëra në funksion të reklamave të bazuara në zakonet e përdoruesit.">
+<!ENTITY prefs.dnt.learnMore            "Mësoni më tepër rreth Mos Më Gjurmo-së">
+
+<!ENTITY prefs.cookies.name             "Cookie-t">
+<!ENTITY prefs.cookies.desc             "Cookie-t janë copëza të dhënash të depozituara në kompjuterin tuaj nga sajtet që vizitoni. Cookie palësh të treta janë ato të depozituara nga një sajt web tjetër nga ai ku ndodheni aktualisht. Disa reklamues i përdorin këto lloje cookie-sh për të ndjekur vizitat tuaja në sajte web te të cilët ata kanë reklama. Firefox-i ka rregullime që ju lejojnë të miratoni ose hidhni tej kërkesa për depozitim cookie-sh, të fshini cookie-t automatikisht, etj.">
+<!ENTITY prefs.cookies.learnMore        "Mësoni më tepër rreth Cookie-ve">
+
+<!ENTITY prefs.fhr.name                 "Firefox Health Report">
+<!ENTITY prefs.fhr.pre                  "Firefox Health Report ju furnizon të dhëna rreth punimit të shfletuesit dhe qëndrueshmërisë së tij përgjatë një rrjedhe kohore. Mandej, bazuar në këto të dhëna, ju jep këshilla të dobishme për t’ju ndihmuar të përfitoni maksimumin prej punimit në shfletues. Për më tepër të dhëna rreth se si i trajtojmë të dhënat tuaja, shihni ">
+<!ENTITY prefs.fhr.link                 "rregullat tona mbi privatësinë">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "Mësoni më tepër rreth Firefox Health Report">
+
+<!ENTITY prefs.telemetry.name           "Telemetria">
+<!ENTITY prefs.telemetry.desc           "Telemetria mat dhe grumbullon të dhëna jopersonale rreth punimit të shfletuesit tuaj Firefox — të tilla si sa kujtesë përdoret, shpejtësinë e shfletuesit dhe përdorimin nga ai të karakteristikave — dhe ia dërgon ato Mozilla-s. Këto të dhëna mandej përdoren për të na ndihmuar ta bëjmë edhe më të mirë Firefox-in.">
+<!ENTITY prefs.telemetry.learnMore      "Mësoni më tepër mbi Telemetrinë">
+
+<!ENTITY prefs.crash.name               "Njoftues Vithisjesh">
+<!ENTITY prefs.crash.desc               "Njoftuesi i Vithisjeve ju jep mundësinë të parashtroni te Mozilla raporte vithisjesh, si një përpjekje për të na ndihmuar ta bëjmë Firefox-in më të qëndrueshëm dhe më të sigurt. Në një raport vithisjeje mund të përfshihen disa të dhëna personale, të tilla si URL-të që keni vizituar.">
+<!ENTITY prefs.crash.learnMore          "Mësoni më tepër mbi Njoftuesin e Vithisjeve">
+
+<!ENTITY prefs.mls.name                 "Shërbime Lokalizimi te Mozilla">
+<!ENTITY prefs.mls.desc                 "Shërbimet e Lokalizimit te Mozilla ndajnë me Mozilla-n vendndodhje të përafërta sinjalesh Wi-Fi dhe celulari, për të na ndihmuar të përmirësojmë shërbimin tonë të gjeolokalizimit.">
+
+<!ENTITY features.title                 "Mekanizma Privatësie">
+<!ENTITY features.intro                 "Përtej parapëlqimeve të rregullueshme mbi privatësinë më sipër, Firefox-i përmban gjithashtu edhe disa mekanizma privatësie që mund t’i përdorni përditë, si ndihmë për t’i mbajtur private të dhënat tuaja personale të shfletimit.">
+
+<!ENTITY features.pb.title              "Shfletim Privat">
+<!ENTITY features.pb.desc               "Kur hapen skeda Shfletimi Privat, Firefox-i për Android nuk do të pranojë cookie, nuk do të mbajë mend fjalëkalime dhe as do të regjistrojë në historik gjë rreth çfarëdo sajti që vizituat. Një sesion Shfletimi Privat mund ta hapni duke prekur ikonën e menusë te shfletuesi juaj dhe duke përzgjedhur &quot;Skedë e Re Private&quot;.">
+<!ENTITY features.pb.learnMore          "Mësoni më tepër rreth Shfletimit Privat">
+
+<!ENTITY features.gb.title              "Shfletim Si Mysafir">
+<!ENTITY features.gb.desc               "Sesionet e Shfletimit Si Mysafir i lejojnë dikujt tjetër të përdorë Firefox-in në pajisjen tuaj Android, pa mundur të shohë të dhëna tuajat personale, të tilla si fjalëkalime, faqerojtës dhe historik shfletimesh.">
+<!ENTITY features.gb.learnMore          "Mësoni më tepër mbi Shfletimin Si Mysafir">
+
+<!ENTITY features.ch.title              "Pastroni Historikun dhe të dhëna të tjera">
+<!ENTITY features.ch.desc               "Fshini kollaj të dhënat tuaja personale, të tilla si historik shfletimesh, fjalëkalime, etj., kurdo që dëshironi. Te rregullimet tuaja mbi privatësinë mundeni edhe të zgjidhni të pastrohen të dhënat private sa herë që përzgjidhni &quot;Dilni&quot; nga menuja kryesore.">
+<!ENTITY features.ch.learnMore          "Mësoni si të pastroni historikun">
+
+<!ENTITY httpsSearch.title              "Kërkime HTTPS">
+<!ENTITY httpsSearch.intro              "Për t’i mbajtur private kërkimet tuaja në linjë, këshillojmë përdorimin vetëm të motorëve të kërkimit që mbulojnë HTTPS-në, një protokoll komunikimesh të sigurta. Për t’ju ndihmuar të jeni në dijeni, Firefox-i do t’ju sinjalizojë përpara se të bëni një kërkim që kryhet përmes një rrjeti HTTP të pasigurt. Firefox-i do t’ju shfaqë gjithashtu një sinjalizim, kur provoni ta kaloni si parazgjedhjen tuaj një motor kërkimesh HTTP. Motorin tuaj parazgjedhje për kërkimet mund ta ndërroni kur të doni, te faqja e rregullimeve mbi kërkimet.">
+
+<!ENTITY addons.title                   "Shtesa të Tjera">
+<!ENTITY addons.description             "Shpresojmë t’ju duket i dobishëm Firefox Privacy Coach-i dhe të keni tani një ide më të qartë mbi mjaft nga mekanizmat dhe rregullimet mbi privatësinë të shfletuesit tuaj. Nëse do të donit edhe më tepër kontroll mbi të dhënat tuaja personale të shfletimeve, hidhuni një sy disave prej shtesave të radhitura më poshtë.">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "Mbron privatësinë tuaj duke ju lejuar të shihni se kush po e gjurmon shfletimin tuaj në Web dhe t’i bllokoni ata.">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "Kodon komunikimet tuaja me mjaft nga sajtet e njohur web, duke e bërë shfletimin tuaj më të sigurt.">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "Pastron cookie-t dhe LocalStorage-in për një sajt, sapo mbyllni çfarëdo skede të hapur për atë faqe. Ju mbron gjithashtu kundër gjurmuesish dhe zombie-cookies, dhe ju bën të mundur të lejoni shërbime që i njihni për të besueshme.">
+<!ENTITY addons.more.pre                "Për edhe më tepër, mund të eksploronit grupin tonë të plotë të ">
+<!ENTITY addons.more.link               "shtesave për Sigurinë &amp; Privatësinë »">
+<!ENTITY addons.more.post               "">
+
+<!ENTITY settingsButton.privacy         "Rregullime Privatësie">
+<!ENTITY settingsButton.mozilla         "Rregullime Mozilla">
+<!ENTITY settingsButton.search          "Rregullime Kërkimi">
+
+<!ENTITY features.learnMore             "Mësoni Më Tepër">
