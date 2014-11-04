@@ -1,9 +1,9 @@
-<!ENTITY welcome.title                  "Guia de Privacidade do Firefox">
+<!ENTITY welcome.title                  "Tutor de Privacidade do Firefox">
 
-<!ENTITY welcome.firefoxPrivacyCoach    "Guia de Privacidade do Firefox">
+<!ENTITY welcome.firefoxPrivacyCoach    "Tutor de Privacidade do Firefox">
 <!ENTITY welcome.byMozilla              "feito pela Mozilla">
 
-<!ENTITY welcome.intro                  "Bem vindo ao Guia de Privacidade, seu guia para aprender a configurar as opções de privacidade do Firefox para Android. Você pode acessar essa página a qualquer momento no menu Ferramentas do seu navegador.">
+<!ENTITY welcome.intro                  "Bem vindo ao Tutor de Privacidade, seu guia para aprender a configurar as opções de privacidade do Firefox para Android. Você pode acessar essa página a qualquer momento no menu Ferramentas do seu navegador.">
 
 <!ENTITY prefs.title                    "Configurações de privacidade">
 <!ENTITY prefs.intro                    "O Firefox permite que você altere várias configurações para te oferecer a navegação mais segura e com a maior privacidade possível. Criamos essa lista de preferências para te explicar como as configurações funcionam e te ajudar a escolher quais configurações são mais adequadas para o seu gosto.">
@@ -52,7 +52,7 @@
 <!ENTITY httpsSearch.intro              "Para manter suas pesquisas online privativas, recomendamos usar apenas sites de busca que trabalham com HTTPS, que é um protocolo de comunicação seguro. O Firefox vai te avisar sempre que você tentar fazer uma busca em um site que não utiliza HTTPS. Também vamos te avisar se você definir um site sem HTTPS como provedor de pesquisas padrão. Você pode mudar alterar o provedor de pesquisas padrão do navegador a qualquer momento, na página de configurações de pesquisa.">
 
 <!ENTITY addons.title                   "Complementos">
-<!ENTITY addons.description             "Esperamos que você tenha achado o Guia de Privacidade útil e tenha compreendido melhor as várias opções de privacidade do seu Firefox. e você quiser ter ainda mais controle sobre sua privacidade, confira estes complementos que separamos para você.">
+<!ENTITY addons.description             "Esperamos que você tenha achado o Tutor de Privacidade útil e tenha compreendido melhor as várias opções de privacidade do seu Firefox. e você quiser ter ainda mais controle sobre sua privacidade, confira estes complementos que separamos para você.">
 
 <!ENTITY addons.ghostery.title          "Ghostery">
 <!ENTITY addons.ghostery.description    "Protege sua privacidade mostrando quem está te rastreando, e permitindo que você bloqueie rastreamentos.">

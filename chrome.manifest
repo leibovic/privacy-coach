@@ -5,5 +5,6 @@ locale        privacycoach  fr            locale/fr/
 locale        privacycoach  ja            locale/ja/
 locale        privacycoach  pt-BR         locale/pt-BR/
 locale        privacycoach  ru            locale/ru/
+locale        privacycoach  sq            locale/sq/
 locale        privacycoach  zh-TW         locale/zh-TW/
 skin          privacycoach  classic       skin/

@@ -33,7 +33,7 @@
         <em:localized>
           <Description>
             <em:locale>pt-BR</em:locale>
-            <em:name>Guia de Privacidade</em:name>
+            <em:name>Tutor de Privacidade</em:name>
             <em:description>Complemento que te ajuda a usar os recursos de privacidade no seu navegador.</em:description>
           </Description>
         </em:localized>
@@ -42,6 +42,13 @@
             <em:locale>ru</em:locale>
             <em:name>Тренер по приватности</em:name>
             <em:description>Дополнение, помогающее вам использовать в браузере функции приватности.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>sq</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Shtesë që ju lejon të përdorni veçori privatësie në shfletuesin tuaj.</em:description>
           </Description>
         </em:localized>
         <em:localized>
