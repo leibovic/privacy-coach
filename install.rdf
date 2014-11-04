@@ -25,9 +25,23 @@
         </em:localized>
         <em:localized>
           <Description>
+            <em:locale>es-ES</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Complemento que le ayuda a usar características de privacidad en su navegador.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
             <em:locale>fr</em:locale>
             <em:name>Votre Coach vie privée</em:name>
             <em:description>Extension qui vous aide à maîtriser les fonctionnalités de protection de la vie privée de votre navigateur.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>it</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Un componente aggiuntivo che ti aiuta a utilizzare gli strumenti per la privacy di Firefox.</em:description>
           </Description>
         </em:localized>
         <em:localized>
