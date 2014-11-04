@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Firefox Privacy Coach">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Firefox Privacy Coach">
+<!ENTITY welcome.byMozilla              "od Mozilly">
+
+<!ENTITY welcome.intro                  "Vítejte v doplňku Privacy Coach, vaší jednoduché cestě ke správě soukromí ve vašem Firefoxu pro Android. Tuto stránky můžete kdykoliv znovu navštívit otevřením nabídky Nástroje ve vašem prohlížeči.">
+
+<!ENTITY prefs.title                    "Nastavení soukromí">
+<!ENTITY prefs.intro                    "Firefox vám umožňuje přizpůsobit si různá nastavení pro maximální možné soukromí a bezpečnost během prohlížení. Připravili jsme pro vás tento seznam nastavení a vysvětlení, jak fungují, abychom vám pomohli se snadno rozhodnout, která jsou pro vás ta správná.">
+
+<!ENTITY prefs.dnt.name                 "Do Not Track">
+<!ENTITY prefs.dnt.desc                 "Tato funkce přinesená Firefoxem vám pomáhá udržet si kontrolu, jaké informace jsou o vás sbírány během prohlížení. Je-li tato funkce povolená, Firefox bude stránkám, aplikacím i reklamním serverům sdělovat, že si nepřejete být sledování za účelem přizpůsobení reklamního obsahu.">
+<!ENTITY prefs.dnt.learnMore            "Zjistěte více o Do Not Track">
+
+<!ENTITY prefs.cookies.name             "Cookies">
+<!ENTITY prefs.cookies.desc             "Pomocí cookies mohou stránky, které navštívíte, na váš počítat ukládat různé informace. Cookies třetích stran jsou pak ukládány i jinými stránkami, než které přímo navštívíte. Některé reklamní služby je využívají pro sledování vašich návštěv. Firefox umožňuje nastavit, zda je nebo není možné cookies ukládat, případně je automaticky mazat nebo jinak spravovat.">
+<!ENTITY prefs.cookies.learnMore        "Zjistěte více o cookies">
+
+<!ENTITY prefs.fhr.name                 "Hlášení o zdraví aplikace Firefox">
+<!ENTITY prefs.fhr.pre                  "Hlášení o zdraví aplikace Firefox vám zobrazí informace o rychlosti a stabilitě vašeho prohlížeče. Poté vám nabídne také užitečné tipy a pomůže vám prohlížeč nastavit pro co nejlepší prohlížení. Pro více informací, jak s těmito daty Mozilla nakládá, si přečtěte naše informace o ">
+<!ENTITY prefs.fhr.link                 "Soukromí">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "Zjistěte více o hlášení o zdraví Firefoxu">
+
+<!ENTITY prefs.telemetry.name           "Telemetrie">
+<!ENTITY prefs.telemetry.desc           "Telemetrie měří a sbírá anonymní data o rychlosti Vašeho prohlížeče Firefox — jako je spotřeba paměti, rychlost prohlížení a využívání funkcí — a posílá je Mozille. Tyto informace jsou pak využívány pro zlepšení Firefoxu přesně pro vás.">
+<!ENTITY prefs.telemetry.learnMore      "Zjistěte více o telemetrii">
+
+<!ENTITY prefs.crash.name               "Hlášení pádů">
+<!ENTITY prefs.crash.desc               "Hlášení pádů vám dává možnost zasílat informace o pádech prohlížeče Mozille, což nám pomůže udělat Firefox stabilnější a bezpečnější. Hlášení o pádech mohou obsahovat některá osobní data, jako jsou URL adresy stránek, které jste zrovna navštívili.">
+<!ENTITY prefs.crash.learnMore          "Zjistěte více o hlášení pádů">
+
+<!ENTITY prefs.mls.name                 "Mozilla Location Services">
+<!ENTITY prefs.mls.desc                 "Mozilla Location Services sdílí přibližnou polohu Wi-Fi a mobilního vysílače pro zlepšení geolokačních služeb Mozilly.">
+
+<!ENTITY features.title                 "Funkce pro soukromí">
+<!ENTITY features.intro                 "Jako doplnění k nastavení soukromí výše, Firefox také obsahuje několik funkcí, které můžete využívat každý den pro lepší ochranu svých osobních dat o prohlížení.">
+
+<!ENTITY features.pb.title              "Anonymní prohlížení">
+<!ENTITY features.pb.desc               "Při prohlížení v otevřeném anonymním panelu nebude Firefox ukládat žádné cookies, hesla nebo historii jakýchkoliv navštívených stránek. Anonymní panel můžete otevřít klepnutím na ikonu menu a vybráním &quot;Nový anonymní panel&quot;.">
+<!ENTITY features.pb.learnMore          "Zjistěte více o anonymním prohlížení">
+
+<!ENTITY features.gb.title              "Prohlížení pro hosty">
+<!ENTITY features.gb.desc               "Prohlížení pro hosty umožní někoho dalšího používat Firefox na vašem zařízení s Androidem bez toho, aby viděl jakékoliv vaše osobní informace, jako jsou hesla, záložky nebo historie.">
+<!ENTITY features.gb.learnMore          "Zjistěte více o prohlížení pro hosty">
+
+<!ENTITY features.ch.title              "Vymazání historie prohlížení a dalších dat">
+<!ENTITY features.ch.desc               "Svá osobní data, jakými jsou historie prohlížení nebo hesla, můžete snadno smazat kdykoliv budete chtít. V nastavení soukromí můžete nastavit také jejich automatické smazání kdykoliv se rozhodnete prohlížeč &quot;Ukončit&quot; z hlavní nabídky.">
+<!ENTITY features.ch.learnMore          "Zjistěte jak vymazat svou historii prohlížení">
+
+<!ENTITY httpsSearch.title              "HTTPS vyhledávání">
+<!ENTITY httpsSearch.intro              "Pro udržení vašeho vyhledávání v soukromí doporučujeme používat pouze ty vyhledávače, které podporují zabezpečený komunikační protokol HTTPS. Firefox vás vždy upozorní před vyhledáváním pomocí nezabezpečeného HTTP spojení. Firefox vás také upozorní, pokud se rozhodnete nastavit vyhledávač s HTTP jako svůj výchozí. Svůj výchozí vyhledávač můžete také kdykoliv změnit na stránce nastavení vyhledávání.">
+
+<!ENTITY addons.title                   "Přídavné doplňky">
+<!ENTITY addons.description             "Věříme, že je pro vás náš Firefox Privacy Coach užitečný a pomohl vám porozumět mnoha funkcím a nastavení soukromí. Pokud byste rádi měli jetšě větší kontrolu na svými osobními daty o prohlížení, vyzkoušejte některé níže nabízené doplňky.">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "Ochrání vaše soukromí, ukáže vám, kdo vás zrovna na webu sleduje, a pomůže tomu zabránit.">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "Šifruje vaši komunikaci na většině nejpoužívanějších stránek pro bezpečnější prohlížení.">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "Zbaví vás cookies a dat LocalStorage hned jak zavřete některý z otevřených panelů. Chrání také před sledováním a zombie-cookies a zároveň umožní ukládání dat povolit pro stránky a služby, kterým důvěřujete.">
+<!ENTITY addons.more.pre                "Mnohem více doplňků najdete v našem kompletním seznamu doplňků pro ">
+<!ENTITY addons.more.link               "Bezpečnost a soukromí »">
+<!ENTITY addons.more.post               "">
+
+<!ENTITY settingsButton.privacy         "Nastavení soukromí">
+<!ENTITY settingsButton.mozilla         "Nastavení Mozilly">
+<!ENTITY settingsButton.search          "Nastavení vyhledávání">
+
+<!ENTITY features.learnMore             "Zjistěte více">

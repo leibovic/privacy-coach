@@ -11,6 +11,13 @@
         <em:creator>Margaret Leibovic</em:creator>
         <em:localized>
           <Description>
+            <em:locale>cs</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Doplněk, který vám pomůže lépe využívat nastavení soukromí ve vašem prohlížeči.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
             <em:locale>de</em:locale>
             <em:name>Datenschutzhelfer</em:name>
             <em:description>Add-on, das Sie bei der Verwendung der Datenschutzfunktionen Ihres Browsers unterstützt.</em:description>

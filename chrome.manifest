@@ -1,4 +1,5 @@
 content       privacycoach  content/
+locale        privacycoach  cs            locale/cs/
 locale        privacycoach  de            locale/de/
 locale        privacycoach  en-US         locale/en-US/
 locale        privacycoach  fr            locale/fr/
