@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Assistente personale per la privacy di Firefox">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Assistente personale per la privacy di Firefox">
+<!ENTITY welcome.byMozilla              "realizzato da Mozilla">
+
+<!ENTITY welcome.intro                  "Benvenuto in Privacy Coach, il factotum che ti consentirà di conoscere e gestire tutte le impostazioni relative alla privacy di Firefox per Android. Sarà sempre possibile accedere a questa pagina utilizzando il menu Strumenti di Firefox.">
+
+<!ENTITY prefs.title                    "Impostazioni relative alla privacy">
+<!ENTITY prefs.intro                    "In Firefox sono disponibili diverse impostazioni per garantire una navigazione il più possibile anonima e sicura. Per determinare le impostazioni più adatte al tuo stile di navigazione abbiamo deciso di descrivere le varie preferenze singolarmente.">
+
+<!ENTITY prefs.dnt.name                 "Antitracciamento (Do Not Track)">
+<!ENTITY prefs.dnt.desc                 "Questa innovativa caratteristica di Firefox ti aiuterà a mantenere il controllo sulle modalità di raccolta e di utilizzo dei dati personali da parte dei siti web. Attivando l’antitracciamento è possibile far sapere ai network pubblicitari, ai siti web e alle applicazioni che non vuoi che i tuoi dati personali siano utilizzati per scopi come la visualizzazione di avvisi pubblicitari mirati.">
+<!ENTITY prefs.dnt.learnMore            "Ulteriori informazioni su Do Not Track">
+
+<!ENTITY prefs.cookies.name             "Cookie">
+<!ENTITY prefs.cookies.desc             "Un cookie è un’informazione memorizzata nel computer da un sito web che visiti. I cookie di terze parti sono dei cookie impostati da siti diversi da quello attualmente visualizzato nel browser. Alcuni inserzionisti pubblicitari utilizzano questo tipo di cookie per tenere traccia delle visite ai siti in cui offrono i loro servizi. Firefox consente di accettare o bloccare le richieste di memorizzazione dei cookie da parte dei siti, di cancellarli automaticamente alla chiusura e molto altro ancora.">
+<!ENTITY prefs.cookies.learnMore        "Ulteriori informazioni sui cookie">
+
+<!ENTITY prefs.fhr.name                 "Analisi integrità di Firefox">
+<!ENTITY prefs.fhr.pre                  "Lo strumento Analisi integrità di Firefox (Firefox Health Report) fornisce informazioni sulle prestazioni e sul corretto funzionamento del browser nel corso del tempo. Basandosi su tali informazioni vengono elaborati dei suggerimenti per ottimizzare la tua esperienza di navigazione. Per ulteriori informazioni riguardanti il trattamento dei dati raccolti consulta la nostra ">
+<!ENTITY prefs.fhr.link                 "Informativa sulla privacy">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "Ulteriori informazioni su Analisi integrità di Firefox">
+
+<!ENTITY prefs.telemetry.name           "Telemetria">
+<!ENTITY prefs.telemetry.desc           "Lo strumento Telemetria quantifica e raccoglie informazioni non personali relative alle prestazioni di Firefox — quali il consumo di memoria, i tempi necessari al browser per effettuare le operazioni e la frequenza con cui vengono utilizzati i vari strumenti interni — e le invia a Mozilla che le utilizza per migliorare le prossime versioni di Firefox.">
+<!ENTITY prefs.telemetry.learnMore      "Ulteriori informazioni su Telemetria">
+
+<!ENTITY prefs.crash.name               "Segnalazione arresti anomali">
+<!ENTITY prefs.crash.desc               "Lo strumento Segnalazione arresti anomali (Crash Reporter) consente di inviare a Mozilla i dati relativi agli arresti anomali, con l’obiettivo di permettere a Mozilla di migliorare la stabilità e la sicurezza di Firefox. Nelle segnalazioni di arresto anomalo potrebbero essere presenti informazioni personali, quali gli indirizzi dei siti web visitati.">
+<!ENTITY prefs.crash.learnMore          "Ulteriori informazioni su Segnalazione arresti anomali">
+
+<!ENTITY prefs.mls.name                 "Servizi Mozilla per il rilevamento della posizione geografica">
+<!ENTITY prefs.mls.desc                 "I servizi Mozilla per il rilevamento della posizione condividono con Mozilla stessa informazioni sulla posizione geografica approssimativa, utilizzando i dati della rete Wi-Fi o di telefonia mobile, per migliorare il servizio di geolocalizzazione offerto da Mozilla.">
+
+<!ENTITY features.title                 "Caratteristiche relative alla privacy">
+<!ENTITY features.intro                 "In aggiunta alle impostazioni personalizzabili descritte in precedenza, in Firefox sono disponibili anche altri strumenti sviluppati per permetterti di mantenere i tuoi dati personali privati nell’uso quotidiano.">
+
+<!ENTITY features.pb.title              "Navigazione anonima">
+<!ENTITY features.pb.desc               "Quando viene aperta una scheda in modalità navigazione anonima in Firefox per Android, non verranno memorizzati informazioni personali quali cookie di sessione, password o siti visitati. Puoi aprire una scheda in modalità navigazione anonima toccando l’icona menu del browser e selezionando “Nuova scheda anonima”.">
+<!ENTITY features.pb.learnMore          "Ulteriori informazioni sulla navigazione anonima">
+
+<!ENTITY features.gb.title              "Navigazione in modalità ospite">
+<!ENTITY features.gb.desc               "Una sessione in modalità ospite consente ad altre persone di utilizzare Firefox sul tuo dispositivo Android senza che abbiano accesso ai tuoi dati personali, quali password, segnalibri e cronologia di navigazione.">
+<!ENTITY features.gb.learnMore          "Ulteriori informazioni sulla navigazione in modalità ospite">
+
+<!ENTITY features.ch.title              "Cancellazione della cronologia o di altri dati personali">
+<!ENTITY features.ch.desc               "Cancella facilmente e in qualunque momento i tuoi dati personali, quali la cronologia di navigazione, le password e molto altro ancora. È inoltre possibile decidere di cancellare i dati personali alla chiusura di Firefox impostando la relativa preferenza nelle impostazioni relative alla privacy.">
+<!ENTITY features.ch.learnMore          "Scopri come cancellare la cronologia di navigazione">
+
+<!ENTITY httpsSearch.title              "Ricerche utilizzando HTTPS">
+<!ENTITY httpsSearch.intro              "Per mantenere le tue ricerche anonime ti consigliamo di utilizzare solo motori di ricerca che implementano il protocollo sicuro HTTPS, che consente di cifrare le trasmissioni dei dati tra il browser e il server. Per mantenerti sempre informato, in Firefox vengono mostrati degli avvisi quando effettui delle ricerche o tenti di impostare come motore di ricerca predefinito un sito che utilizza il protocollo standard non sicuro HTTP. Potrai cambiare in qualunque momento il motore di ricerca predefinito nella pagina delle impostazioni per le ricerche.">
+
+<!ENTITY addons.title                   "Alcuni componenti aggiuntivi">
+<!ENTITY addons.description             "Ci auguriamo che Privacy Coach ti sia stata utile e che la tua conoscenza delle impostazioni e delle caratteristiche in materia di privacy online sia aumentata. Se cerchi strumenti ancora più efficaci per avere maggiore controllo sui tuoi dati personali ti invitiamo a dare un’occhiata ai componenti aggiuntivi descritti qui di seguito.">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "Protegge la tua privacy mostrandoti quali sono i siti che ti stanno tracciando e ti permette di bloccarli.">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "Assicura, per la maggior parte dei siti più popolari, che le comunicazioni vengano cifrate, in modo da aumentare la sicurezza della navigazione.">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "Consente di cancellare i cookie e le informazioni memorizzate dai siti utilizzando l’API Local Storage alla chiusura della scheda. Costituisce inoltre una protezione contro i tracker online e i cookie rigenerati tramite plugin (chiamati “cookie zombi”) e permette di creare delle liste di siti affidabili.">
+<!ENTITY addons.more.pre                "Per scoprirne altri, puoi visitare la sezione ">
+<!ENTITY addons.more.link               "Sicurezza e Privacy">
+<!ENTITY addons.more.post               " del nostro sito dedicato ai componenti aggiuntivi »">
+
+<!ENTITY settingsButton.privacy         "Impostazioni relative alla privacy">
+<!ENTITY settingsButton.mozilla         "Impostazioni Mozilla">
+<!ENTITY settingsButton.search          "Impostazioni delle ricerche">
+
+<!ENTITY features.learnMore             "Ulteriori informazioni">
