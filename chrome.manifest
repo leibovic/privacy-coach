@@ -1,5 +1,13 @@
 content       privacycoach  content/
+locale        privacycoach  cs            locale/cs/
 locale        privacycoach  de            locale/de/
 locale        privacycoach  en-US         locale/en-US/
+locale        privacycoach  es-ES         locale/es-ES/
+locale        privacycoach  fr            locale/fr/
+locale        privacycoach  it            locale/it/
 locale        privacycoach  ja            locale/ja/
+locale        privacycoach  pt-BR         locale/pt-BR/
+locale        privacycoach  ru            locale/ru/
+locale        privacycoach  sq            locale/sq/
+locale        privacycoach  zh-TW         locale/zh-TW/
 skin          privacycoach  classic       skin/

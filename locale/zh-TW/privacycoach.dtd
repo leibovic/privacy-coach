@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Firefox Privacy Coach">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Firefox Privacy Coach">
+<!ENTITY welcome.byMozilla              "by Mozilla">
+
+<!ENTITY welcome.intro                  "歡迎使用 Privacy Coach，這是讓您了解與控管您 Firefox for Android 隱私設定的單一窗口。您可以隨時在瀏覽器中開啟工具選單回到這個頁面。">
+
+<!ENTITY prefs.title                    "隱私偏好設定">
+<!ENTITY prefs.intro                    "Firefox 讓您可以調整一些設定，讓您的瀏覽體驗更加私密、安全。我們在下面列出這些偏好設定並解釋其功能，來幫助您決定要如何設定。">
+
+<!ENTITY prefs.dnt.name                 "Do Not Track">
+<!ENTITY prefs.dnt.desc                 "這個 Firefox 的創新幫助您能控制您的瀏覽資訊被如何收集、使用。開啟此功能後，Firefox 將告訴廣告網路、網站與應用程式您不想被行為廣告等方式追蹤您的上網行為。">
+<!ENTITY prefs.dnt.learnMore            "了解 Do Not Track 的更多資訊">
+
+<!ENTITY prefs.cookies.name             "Cookies">
+<!ENTITY prefs.cookies.desc             "Cookie 是您曾開啟過的網站儲存在您電腦上的資訊。而第三方 Cookie 是由不在您目前所在網站所儲存的 Cookie。一些廣告商會使用這些 Cookies 來追蹤您在它們投放廣告的網站的瀏覽情況。Firefox 當中有個選項，可讓您允許或拒絕儲存 Cookie 的請求、自動刪除 Cookies 等等。">
+<!ENTITY prefs.cookies.learnMore        "了解 Cookies 的更多資訊">
+
+<!ENTITY prefs.fhr.name                 "Firefox 健康檢查報告">
+<!ENTITY prefs.fhr.pre                  "Firefox 健康檢查報告提供您自首次使用以來，您瀏覽器的效能與穩定度。然後依照收集到的資料，提供您一些秘訣來幫助您完全發揮瀏覽器的威力。若需關於我們如何處理您的資料的相關資訊，請見我們的">
+<!ENTITY prefs.fhr.link                 "隱私權保護政策">
+<!ENTITY prefs.fhr.post                 "。">
+<!ENTITY prefs.fhr.learnMore            "了解 Firefox 健康檢查報告的更多資訊">
+
+<!ENTITY prefs.telemetry.name           "Telemetry">
+<!ENTITY prefs.telemetry.desc           "Telemetry 會測量並收集關於您 Firefox 瀏覽器與效能相關的非個人資訊：例如記憶體使用量、瀏覽速度與功能使用情況，並回報給 Mozilla。該資訊將用來幫助我們為您改善 Firefox。">
+<!ENTITY prefs.telemetry.learnMore      "了解 Telemetry 的更多資訊">
+
+<!ENTITY prefs.crash.name               "錯誤回報員">
+<!ENTITY prefs.crash.desc               "錯誤回報員讓您可以送出錯誤報告給 Mozilla，以幫助我們讓 Firefox 變得更穩定、更安全。錯誤報告中可能會包含一些個人資料，例如您曾開啟過的網址。">
+<!ENTITY prefs.crash.learnMore          "了解錯誤回報員的更多資訊">
+
+<!ENTITY prefs.mls.name                 "Mozilla Location Services">
+<!ENTITY prefs.mls.desc                 "Mozilla Location Services 會回報您所在位置附近大略的 Wi-Fi 與行動網路基地台位置給 Mozilla 以幫助我們改善我們的地理訂位服務。">
+
+<!ENTITY features.title                 "隱私保護相關功能">
+<!ENTITY features.intro                 "除了以上可調整的隱私偏好設定，Firefox 還內建了一些保護您隱私的功能，讓您可以在日常生活中使用，並幫助您保護個人瀏覽資料的隱私。">
+
+<!ENTITY features.pb.title              "隱私瀏覽">
+<!ENTITY features.pb.desc               "開啟隱私瀏覽分頁後，Firefox for Android 將不會接受 Cookies、記得您上網輸入的密碼或瀏覽紀錄。您可以透過點擊瀏覽器選單圖示，並選擇「開新隱私瀏覽分頁」來開啟隱私瀏覽階段。">
+<!ENTITY features.pb.learnMore          "了解隱私瀏覽的更多資訊">
+
+<!ENTITY features.gb.title              "訪客瀏覽">
+<!ENTITY features.gb.desc               "訪客瀏覽階段可讓其他人使用您 Android 裝置上的 Firefox，而不會看到您的密碼、書籤、瀏覽紀錄等個人資訊。">
+<!ENTITY features.gb.learnMore          "了解訪客瀏覽的更多資訊">
+
+<!ENTITY features.ch.title              "清除瀏覽紀錄與其他資料">
+<!ENTITY features.ch.desc               "隨時都能簡單地刪除您的瀏覽紀錄、密碼等個人資料。在您的隱私設定中，您可以指定在每次選擇主選單的「離開」時清除隱私資料。">
+<!ENTITY features.ch.learnMore          "了解如何清除您的瀏覽紀錄">
+
+<!ENTITY httpsSearch.title              "HTTPS 加密搜尋">
+<!ENTITY httpsSearch.intro              "為了確保您在線上瀏覽的隱私，我們推薦您只使用支援 HTTPS 加密搜尋的搜尋引擎。Firefox 也將在您的搜尋透過未加密的 HTTP 網路送出時提醒您，並在您將 HTTP 搜尋引擎設為預設值時警告您。您可以隨時在搜尋設定頁面更改您的預設搜尋引擎。">
+
+<!ENTITY addons.title                   "其他附加元件">
+<!ENTITY addons.description             "我們希望您覺得 Firefox Privacy Coach 有點幫助，並更加理解您瀏覽器中的隱私功能與相關設定。若您還想對您的瀏覽資料有更大程度的掌控，可以看看下面列出的幾套附加元件。">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "透過讓您看到誰在追蹤您的網頁瀏覽情形，並封鎖他們來保護您的隱私。">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "加密您與許多知名網站間的通訊，讓您上網更安全。">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "在您關閉頁面後，就丟掉該網站的所有 Cookies 與 LocalStorage。他也能保護您不受追蹤者及殭屍 Cookies 的追蹤，並讓您把信任的服務加入白名單。">
+<!ENTITY addons.more.pre                "如果還要更多，您可以看看我們的">
+<!ENTITY addons.more.link               "安全性與隱私權附加元件">
+<!ENTITY addons.more.post               "的完整清單">
+
+<!ENTITY settingsButton.privacy         "隱私設定">
+<!ENTITY settingsButton.mozilla         "Mozilla 設定">
+<!ENTITY settingsButton.search          "搜尋設定">
+
+<!ENTITY features.learnMore             "了解更多資訊">

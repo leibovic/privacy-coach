@@ -11,6 +11,13 @@
         <em:creator>Margaret Leibovic</em:creator>
         <em:localized>
           <Description>
+            <em:locale>cs</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Doplněk, který vám pomůže lépe využívat nastavení soukromí ve vašem prohlížeči.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
             <em:locale>de</em:locale>
             <em:name>Datenschutzhelfer</em:name>
             <em:description>Add-on, das Sie bei der Verwendung der Datenschutzfunktionen Ihres Browsers unterstützt.</em:description>
@@ -18,9 +25,58 @@
         </em:localized>
         <em:localized>
           <Description>
+            <em:locale>es-ES</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Complemento que le ayuda a usar características de privacidad en su navegador.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>fr</em:locale>
+            <em:name>Votre Coach vie privée</em:name>
+            <em:description>Extension qui vous aide à maîtriser les fonctionnalités de protection de la vie privée de votre navigateur.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>it</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Un componente aggiuntivo che ti aiuta a utilizzare gli strumenti per la privacy di Firefox.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
             <em:locale>ja</em:locale>
             <em:name>プライバシーコーチ</em:name>
             <em:description>ブラウザのプライバシー機能の活用を支援するアドオンです。</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>pt-BR</em:locale>
+            <em:name>Tutor de Privacidade</em:name>
+            <em:description>Complemento que te ajuda a usar os recursos de privacidade no seu navegador.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>ru</em:locale>
+            <em:name>Тренер по приватности</em:name>
+            <em:description>Дополнение, помогающее вам использовать в браузере функции приватности.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>sq</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Shtesë që ju lejon të përdorni veçori privatësie në shfletuesin tuaj.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
+            <em:locale>zh-TW</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>幫助您在瀏覽器中使用隱私功能的附加元件。</em:description>
           </Description>
         </em:localized>
 
