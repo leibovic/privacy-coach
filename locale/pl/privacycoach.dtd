@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Trener prywatności Firefoksa">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Trener prywatności Firefoksa">
+<!ENTITY welcome.byMozilla              "od Mozilli">
+
+<!ENTITY welcome.intro                  "Witaj w trenerze prywatności, narzędziu które uczy jak zarządzać ustawieniami prywatności w Firefoksie dla Androida. Możesz odwiedzić tę stronę w dowolnym momencie z menu Narzędzia w swojej przeglądarce.">
+
+<!ENTITY prefs.title                    "Ustawienia prywatności">
+<!ENTITY prefs.intro                    "Firefox pozwala dopasować wiele ustawień, które sprawią, że przeglądanie stanie się tak prywatne i bezpieczne jak to możliwe. Stworzyliśmy poniższą listę ustawień, aby wyjaśnić co robią i pomóc wybrać które najwłaściwsze.">
+
+<!ENTITY prefs.dnt.name                 "Ograniczanie śledzenia">
+<!ENTITY prefs.dnt.desc                 "Ta funkcja Firefoksa pomaga zachować kontrolę nad tym jak twoje informacje przeglądania są wykorzystywane w sieci. Kiedy włączysz tę funkcję, Firefox powie sieciom reklamowym, stronom i aplikacjom, że nie życzysz sobie śledzenia w celach takich jak marketing behawioralny.">
+<!ENTITY prefs.dnt.learnMore            "Dowiedz się więcej o ograniczaniu śledzenia">
+
+<!ENTITY prefs.cookies.name             "Ciasteczka">
+<!ENTITY prefs.cookies.desc             "Ciasteczko to informacja przechowywana na twoim komputerze przez strony które odwiedzasz. Ciasteczka od innych witryn (Third-party cookies) to takie, które są ustawiane przez strony inne niż ta na której aktualnie jesteś. Niektórzy reklamodawcy korzystają z tego typu ciasteczek, aby śledzić twoje wizyty na stronach, na których mają reklamy. Firefox posiada ustawienia, które pozwalają zezwalać lub odmawiać prośbom o zapisanie takich ciasteczek, usuwać ciasteczka automatycznie oraz inne.">
+<!ENTITY prefs.cookies.learnMore        "Więcej informacji na temat ciasteczek">
+
+<!ENTITY prefs.fhr.name                 "Firefox Health Report">
+<!ENTITY prefs.fhr.pre                  "Firefox Health Report dostarcza informacje na temat wydajności i stabilności Twojej przeglądarki. Następnie daje porady na podstawie tych danych, aby pomóc uzyskać najlepszą jakość korzystania z przeglądarki. Aby dowiedzieć się o tym co robimy z tymi danymi, zobacz naszą ">
+<!ENTITY prefs.fhr.link                 "politykę prywatności">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "Więcej informacji o Firefox Health Report">
+
+<!ENTITY prefs.telemetry.name           "Telemetria">
+<!ENTITY prefs.telemetry.desc           "Telemetria mierzy i zbiera bezosobowe informacje o wydajności Firefoksa - takie jak zużycie pamięci, szybkość przeglądarki i użycie funkcji - a następnie wysyła te dane do Mozilli. Te informacje są wykorzystywane przy opracowywaniu zmian w Firefoksie.">
+<!ENTITY prefs.telemetry.learnMore      "Dowiedz się więcej o telemetrii">
+
+<!ENTITY prefs.crash.name               "Zgłaszanie awarii">
+<!ENTITY prefs.crash.desc               "Narzędzie zgłaszania awarii daje możliwość wysłania raportu o awarii do Mozilli, aby pomóc nam poprawić jakość i bezpieczeństwo Firefoksa. Raport o awarii może zawierać niektóre dane prywatne, takie jak strona, na której nastąpiła awaria.">
+<!ENTITY prefs.crash.learnMore          "Więcej informacji o narzędziu do zgłaszania awarii">
+
+<!ENTITY prefs.mls.name                 "Usługi lokalizacji Mozilli">
+<!ENTITY prefs.mls.desc                 "Usługi lokalizacji Mozilli wysyłają przybliżone położenie sieci Wi-Fi i anten komórkowych do Mozilli, aby pomóc nam budować nasze usługi lokalizacyjne.">
+
+<!ENTITY features.title                 "Funkcje prywatności">
+<!ENTITY features.intro                 "Poza konfigurowalnymi ustawieniami prywatności, Firefox posiada także kilka funkcji, których możesz używać by Twoje dane przeglądania pozostały prywatne.">
+
+<!ENTITY features.pb.title              "Tryb prywatny">
+<!ENTITY features.pb.desc               "Kiedy karty otworzone są w trybie prywatnym, Firefox dla Androida nie będzie akceptował ciasteczek, zapisywał haseł ani historii przeglądania stron które odwiedzasz. Możesz otworzyć tryb prywatny stukając na ikony menu przeglądarki i wybierając &quot;Nowa prywatna karta&quot;.">
+<!ENTITY features.pb.learnMore          "Dowiedz się więcej o trybie prywatności">
+
+<!ENTITY features.gb.title              "Tryb gościa">
+<!ENTITY features.gb.desc               "Tryb gościa pozwala komuś innemu użyć Firefoksa na twoim urządzeniu z Androidem bez możliwości korzystania z Twoich prywatnych danych jak haseł, zakładek czy historii.">
+<!ENTITY features.gb.learnMore          "Dowiedz się więcej o trybie gościa">
+
+<!ENTITY features.ch.title              "Usuń historię i inne dane">
+<!ENTITY features.ch.desc               "Możesz z łatwością usunąć osobiste dane, takie jak historię przeglądania, hasła i inne rzeczy kiedy tylko zechcesz. W ustawieniach prywatności możesz też ustawić by dane prywatne były czyszczone za każdym razem gdy naciskasz &quot;Zamknij&quot; w menu głównym.">
+<!ENTITY features.ch.learnMore          "Dowiedz się jak wyczyścić historię">
+
+<!ENTITY httpsSearch.title              "Wyszukiwanie HTTPS">
+<!ENTITY httpsSearch.intro              "Aby Twoje wyszukiwanie pozostało prywatne, zalecamy korzystanie jedynie z wyszukiwarek, które wspierają HTTPS, bezpieczny protokół komunikacyjny. Firefox poinformuje przed wysłaniem zapytania do wyszukiwarki jeśli miałoby ono zostać wysłane przez niezabezpieczony protokół HTTP. Firefox także ostrzeże jeśli spróbujesz ustawić wyszukiwarkę HTTP jako domyślną. Możesz zmienić domyślną wyszukiwarkę na sekcji wyszukiwania w ustawieniach.">
+
+<!ENTITY addons.title                   "Inne dodatki">
+<!ENTITY addons.description             "Mamy nadzieję, że Trener prywatności Firefoksa okazał się przydatny i lepiej rozumiesz funkcje i ustawienia prywatności swojej przeglądarki. Jeśli chcesz mieć jeszcze więcej kontroli nad swoimi prywatnymi danymi, dodatki wymienione poniżej mogą Ciebie zainteresować.">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "Chroni twoją prywatność informując kto śledzi Twoją sesję przeglądania i blokując ich.">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "Szyfruje Twoje połączenie z wieloma znanymi stronami, sprawiając, że Twoje przeglądanie staje się bezpieczniejsze.">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "Pozbądź się ciasteczek i danych z LocalStorage zapisanych przez stronę, natychmiast po jej zamknięciu. Chroni także przed śledzeniem i ciasteczkami-zombie oraz tworzy listy zaufanych stron.">
+<!ENTITY addons.more.pre                "Aby znaleźć więcej, obejrzyj pełny zestaw ">
+<!ENTITY addons.more.link               "Dodatków bezpieczeństwa i prywatności">
+<!ENTITY addons.more.post               "">
+
+<!ENTITY settingsButton.privacy         "Ustawienia prywatności">
+<!ENTITY settingsButton.mozilla         "Ustawienia Mozilli">
+<!ENTITY settingsButton.search          "Ustawienia wyszukiwania">
+
+<!ENTITY features.learnMore             "Więcej informacji">
