@@ -53,6 +53,13 @@
         </em:localized>
         <em:localized>
           <Description>
+            <em:locale>pl</em:locale>
+            <em:name>Trener prywatności</em:name>
+            <em:description>Dodatek, który pomaga wykorzystać funkcje prywatności przeglądarki.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
             <em:locale>pt-BR</em:locale>
             <em:name>Tutor de Privacidade</em:name>
             <em:description>Complemento que te ajuda a usar os recursos de privacidade no seu navegador.</em:description>
