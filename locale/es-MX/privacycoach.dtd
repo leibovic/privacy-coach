@@ -1,0 +1,71 @@
+<!ENTITY welcome.title                  "Firefox Privacy Coach">
+
+<!ENTITY welcome.firefoxPrivacyCoach    "Firefox Privacy Coach">
+<!ENTITY welcome.byMozilla              "de Mozilla">
+
+<!ENTITY welcome.intro                  "Bienvenido a Privacy Coach, tu punto de referencia para conocer y gestionar los ajustes de privacidad de tu Firefox para Android. Puedes volver a visitar esta página en cualquier momento abriendo el menú "Herramientas" de tu navegador.">
+
+<!ENTITY prefs.title                    "Preferencias de privacidad">
+<!ENTITY prefs.intro                    "Firefox te permite personalizar varios ajustes en un esfuerzo por hacer tu experiencia de navegación tan privada y segura como sea posible. Hemos desglosado esta lista de preferencias para explicar qué hacen y ayudarte a decidir qué ajustes son los correctos para ti.">
+
+<!ENTITY prefs.dnt.name                 "No ser rastreado">
+<!ENTITY prefs.dnt.desc                 "Esta innovación de Firefox te ayuda a mantener el control de cómo se recopila y se usa tu información de navegación en línea. Cuando se activa esta característica, Firefox indicará a las redes, sitios web y aplicaciones de anunciantes que quiere ser excluido del rastreo para publicidad basada en intereses.">
+<!ENTITY prefs.dnt.learnMore            "Más información sobre No ser rastreado">
+
+<!ENTITY prefs.cookies.name             "Cookies">
+<!ENTITY prefs.cookies.desc             "Una cookie es información que se guarda en su equipo sobre los sitios web que visita. Las cookies de terceros son las que envían un sitio web diferente a aquél en el que se encuentra. Algunos anunciantes usan este tipo de cookies para rastrear sus visitas a los sitios web en los que se anuncian. Firefox tiene ajustes que te permiten aprobar o denegar las solicitudes de envío de cookies, eliminar cookies automáticamente y otras funciones.">
+<!ENTITY prefs.cookies.learnMore        "Más información sobre cookies">
+
+<!ENTITY prefs.fhr.name                 "Informe de salud de Firefox">
+<!ENTITY prefs.fhr.pre                  "El informe de salud de Firefox te proporciona información sobre el rendimiento y estabilidad de su navegador a lo largo del tiempo. Luego le ofrece consejos útiles basados en esos datos para ayudarle a obtener lo máximo de su experiencia de navegación. Para más información sobre cómo gestionamos tus datos, leé nuestra ">
+<!ENTITY prefs.fhr.link                 "política de privacidad">
+<!ENTITY prefs.fhr.post                 ".">
+<!ENTITY prefs.fhr.learnMore            "Más información sobre el informe de salud de Firefox">
+
+<!ENTITY prefs.telemetry.name           "Telemetry">
+<!ENTITY prefs.telemetry.desc           "Telemetry mide y recopila información no personal sobre el rendimiento de su navegador Firefox —como el consumo de memoria, velocidad del navegador y uso de características— y lo envía a Mozilla. Esa información es usada después para ayudarnos a mejorar Firefox para usted.">
+<!ENTITY prefs.telemetry.learnMore      "Más información sobre Telemetry">
+
+<!ENTITY prefs.crash.name               "Informe de fallos">
+<!ENTITY prefs.crash.desc               "El informe de fallos te da la oportunidad de enviar información sobre fallos a Mozilla en un esfuerzo por ayudarnos a hacer Firefox más estable y seguro. Un informe de fallos puede incluir algunos datos personales, como las URL que se estaban visitando.">
+<!ENTITY prefs.crash.learnMore          "Más información sobre los informes de fallos">
+
+<!ENTITY prefs.mls.name                 "Servicios de localización de Mozilla">
+<!ENTITY prefs.mls.desc                 "Los servicios de localización de Mozilla comparten con Mozilla ubicaciones aproximadas de acuerdo a datos enviados por WiFi y redes móviles para ayudar a mejorar nuestro servicio de geolocalización.">
+
+<!ENTITY features.title                 "Características de privacidad">
+<!ENTITY features.intro                 "Además de las preferencias personalizables de privacidad anteriores, Firefox también incluye características de privacidad que puedes usar a diario para ayudar a mantener tus datos personales de navegación privados.">
+
+<!ENTITY features.pb.title              "Navegación privada">
+<!ENTITY features.pb.desc               "Cuando se abren pestañas de navegación privada, Firefox para Android no aceptará cookies, no recordará contraseñas ni guardará un historial de los sitios que visites. Puedes abrir una sesión de navegación privada pulsando en los iconos del menú de tu navegador y seleccionando &quot;Nueva pestaña privada&quot;.">
+<!ENTITY features.pb.learnMore          "Más información sobre la navegación privada">
+
+<!ENTITY features.gb.title              "Navegación de invitado">
+<!ENTITY features.gb.desc               "Una sesión de invitado permite que alguien más use Firefox en tu dispositivo Android sin acceder a tu información personal como contraseñas, marcadores o historial.">
+<!ENTITY features.gb.learnMore          "Más información sobre las sesiones de invitado">
+
+<!ENTITY features.ch.title              "Limpiar historial y otros datos">
+<!ENTITY features.ch.desc               "Elimina fácilmente tus datos personales, como el historial de navegación, contraseñas y otros cuando quieras. En tus ajustes de privacidad, puedes elegir limpiar los datos privados cada vez que selecciones &quot;Salir&quot; desde el menú central.">
+<!ENTITY features.ch.learnMore          "Aprende a eliminar tu historial">
+
+<!ENTITY httpsSearch.title              "Búsqueda HTTPS">
+<!ENTITY httpsSearch.intro              "Para mantener la privacidad de tus búsquedas en línea, te recomendamos usar únicamente buscadores que permitan el uso de HTTPS, un protocolo seguro de comunicación. Para ayudar a mantenerte informado, Firefox te avisará antes de realizar una búsqueda que se efectúe sobre una red HTTP insegura. Firefox también te mandará una advertencia si deseas convertir un buscador que usa HTTP en su buscador por defecto. Puedes cambiar tu buscador por defecto en cualquier momento en la página de ajustes de búsqueda.">
+
+<!ENTITY addons.title                   "Complementos adicionales">
+<!ENTITY addons.description             "Esperamos que hayas encontrado útil Firefox Privacy Coach y comprendas mejor las muchas características y ajustes de privacidad del navegador. Si deseas un mayor control sobre tus datos de navegación personal, revisa algunos de los complementos listados más abajo.">
+
+<!ENTITY addons.ghostery.title          "Ghostery">
+<!ENTITY addons.ghostery.description    "Protege tu privacidad permitiéndole ver quién está rastreando tu navegación web y bloqueándola.">
+<!ENTITY addons.https.title             "HTTPS Everywhere">
+<!ENTITY addons.https.description       "Cifra tus comunicaciones con los sitios web más importantes, haciendo más segura tu navegación.">
+<!ENTITY addons.sdc.title               "Self Destructing Cookies">
+<!ENTITY addons.sdc.description         "Elimina las cookies y el almacenamiento local de un sitio tan pronto como cierres todas las pestañas abiertas con ese sitio. También te protege contra rastreadores y cookies-zombi y te permite añadirlos a una lista blanca de servicios en los que confías.">
+<!ENTITY addons.more.pre                "Para conocer aún más, puedes explorar nuestro conjunto de ">
+<!ENTITY addons.more.link               "Complementos de seguridad y privacidad »">
+<!ENTITY addons.more.post               "">
+
+<!ENTITY settingsButton.privacy         "Ajustes de privacidad">
+<!ENTITY settingsButton.mozilla         "Ajustes de Mozilla">
+<!ENTITY settingsButton.search          "Ajustes de búsqueda">
+
+<!ENTITY features.learnMore             "Saber más">

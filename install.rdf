@@ -32,6 +32,13 @@
         </em:localized>
         <em:localized>
           <Description>
+            <em:locale>es-MX</em:locale>
+            <em:name>Privacy Coach</em:name>
+            <em:description>Complemento que te ayuda a usar características de privacidad en tu navegador.</em:description>
+          </Description>
+        </em:localized>
+        <em:localized>
+          <Description>
             <em:locale>fr</em:locale>
             <em:name>Votre Coach vie privée</em:name>
             <em:description>Extension qui vous aide à maîtriser les fonctionnalités de protection de la vie privée de votre navigateur.</em:description>

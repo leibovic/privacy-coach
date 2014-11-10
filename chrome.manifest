@@ -3,6 +3,7 @@ locale        privacycoach  cs            locale/cs/
 locale        privacycoach  de            locale/de/
 locale        privacycoach  en-US         locale/en-US/
 locale        privacycoach  es-ES         locale/es-ES/
+locale        privacycoach  es-MX         locale/es-MX/
 locale        privacycoach  fr            locale/fr/
 locale        privacycoach  it            locale/it/
 locale        privacycoach  ja            locale/ja/
