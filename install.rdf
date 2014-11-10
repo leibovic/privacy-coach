@@ -5,7 +5,7 @@
         <em:id>privacy.coach@mozilla.org</em:id>
         <em:type>2</em:type>
         <em:name>Privacy Coach</em:name>
-        <em:version>1.1</em:version>
+        <em:version>1.2</em:version>
         <em:bootstrap>true</em:bootstrap>
         <em:description>Add-on that helps you use privacy features in your browser.</em:description>
         <em:creator>Margaret Leibovic</em:creator>
