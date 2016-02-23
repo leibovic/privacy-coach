@@ -1,6 +1,6 @@
 #!/bin/bash
 
-XPI=coach.xpi
+XPI=build.xpi
 
 # List add-on files here.
 zip -r $XPI bootstrap.js \
