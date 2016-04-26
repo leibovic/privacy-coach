@@ -18,6 +18,9 @@ const PREF_DONT_WARN_ENGINES = "extensions.privacycoach.dontWarnEngines";
 // Pref to add debugging menu items.
 const PREF_DEBUG = "extensions.privacycoach.debug";
 
+// Pref to disable welcome
+const PREF_SHOW_WELCOME = "extensions.privacycoach.showWelcome";
+
 XPCOMUtils.defineLazyGetter(this, "Strings", function() {
   return Services.strings.createBundle("chrome://privacycoach/locale/privacycoach.properties");
 });
@@ -268,8 +271,15 @@ function startup(data, reason) {
 
   // Open a welcome page on install.
   if (reason == ADDON_INSTALL) {
-    let BrowserApp = Services.wm.getMostRecentWindow("navigator:browser").BrowserApp;
-    BrowserApp.addTab("chrome://privacycoach/content/welcome.xhtml");
+    let showWelcome = true;
+    try {
+      showWelcome = Services.prefs.getBoolPref(PREF_SHOW_WELCOME);
+    } catch(e) {}
+
+    if (showWelcome) {
+      let BrowserApp = Services.wm.getMostRecentWindow("navigator:browser").BrowserApp;
+      BrowserApp.addTab("chrome://privacycoach/content/welcome.xhtml");
+    }
   }
 
   Services.obs.addObserver(observeSearchEngineModified, "browser-search-engine-modified", false);
